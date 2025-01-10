@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url('../files/Kanit/Kanit-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../files/Karla/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
+html{
+    --background:#F4EFEB !important;
+    --dark-blue:#2F4157 !important;
+    --med-blue:#285582 !important;
+    --grey-blue:#577C8E !important;
+    --button: #A55A25 !important;
+    
+    --Kanit: 'Kanit', Arial, sans-serif ;
+    --Karla: 'Karla', Arial, sans-serif ;
+
+    --rhythm: 48px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    margin: var(--rhythm);
+}
+
+h1{
+    font-family: var(--Karla);
+    color: var(--med-blue);
+    font-weight: 800;
+    font-size: 64px;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: var(--Karla);
+    color: var(--med-blue);
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    font-family: var(--Karla);
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-family: var(--Kanit);
+    color: var(--med-blue);
+    font-style: italic;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.fish-img{
+    width: 100%;
+    margin: var(--rhythm) 0;
+}
+
+.team-sect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--rhythm);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px 64px;
+}
+
+.team-member{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.member-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.role{
+    text-align: right;
+}
+
+a{
+    font-family: var(--Kanit);
+    color: var(--button);
+    font-style: normal;
+    text-decoration: none;
+    line-height: 20px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    border: var(--dark-blue) 1px solid;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+@media screen and (max-width: 576px) {
+    body{
+        margin: 50px 28px;
+    }
+
+    h1{
+        font-size: 15vw;
+    }
+}
