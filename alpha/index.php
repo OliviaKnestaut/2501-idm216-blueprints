@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    
-<!-- -------------------------- REGISTER TOGGLE -------------------------- --> 
 
+<!-- -------------------------- REGISTER TOGGLE -------------------------- --> 
+    
     <?php
     // Keep track of which form is currently active
     $activeForm = isset($_GET['form']) ? $_GET['form'] : 'login'; // Default to 'login'
