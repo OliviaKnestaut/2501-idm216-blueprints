@@ -131,6 +131,31 @@ a:hover {
     color: var(--background);
 }
 
+table, th, td{
+    border: 2px;
+    border-style: solid;
+    border-color: var(--button);
+    border-collapse: collapse;
+    padding: 4px 8px;
+    font-family: var(--Kanit);
+    color: var(--dark-blue);
+    font-size: 16px;
+    line-height: 16px;
+    margin: auto;
+}
+th{
+    background-color: var(--button);
+    color:var(--background);
+}
+
+.tablewrapper{
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto; 
+    height: auto;
+    padding: 5px;
+}
+
 @media screen and (max-width: 576px) {
     body{
         margin: 50px 28px;
