@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../files/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../files/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+html{
+    --background:#FFFFF9 !important;
+    --dark-blue: #015582 !important;
+    --light-blue: #C9DEEA !important;
+    --orangey: #E36D5A !important;
+    --light-grey: #B1B1B1 !important;
+
+    --Poppins: 'Poppins', Arial, sans-serif ;
+}
+
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+body{
+    font-family: var(--Poppins);
+    max-width: 390px;
+    margin: 40px auto;
+    font: 14px sans-serif;
+    background-color: var(--background);
+}
+
+.card{
+    width: 344px;
+    margin: auto;
+}
+
+/*-------------- LOGIN AND SIGNUP FORM --------------*/
+
+.form-wrapper{
+    width: 100%;
+    padding: 16px;
+    border-radius: 0px 0px 12px 12px;
+    background: var(--dark-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-group input, .hide-pass{
+    width: 100%;
+    height: 35px;
+    border: 0;
+    padding: 4px 8px;
+    fill: var(--background);
+    border-radius: 8px;
+}
+
+.form-horiz{
+    display: flex;
+    gap: 8px;
+}
+
+.form-group {
+    margin: 12px 0 4px 0;
+}
+
+.tabs {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    justify-content: center;
+}
+.tabs button.left{
+    border-radius: 12px 0px 0px 0px;
+}
+
+.tabs button.right{
+    border-radius: 0px 12px 0px 0px;
+}
+
+.tabs button {
+    width: 50%;
+    border: 0;
+    color: var(--dark-blue);
+    background: var(--light-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.tabs button.active {
+    color: var(--background);
+    background: var(--dark-blue);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0) inset;
+}
+
+::placeholder {
+    color: var(--light-grey);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.invalid-feedback{
+    color: var(--background);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.btn {
+    background: var(--orangey);
+    height: fit-content;
+    border-radius: 30px !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    color: var(--background);
+    font-family: var(--Poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hide-pass{
+    width: 10%;
+    border: 0;
+    padding: 0;
+    margin-top: 0;
+    color: var(--background);
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-group .togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    border-radius: 0px 8px 8px 0px;
+}
