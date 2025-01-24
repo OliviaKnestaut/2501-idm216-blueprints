@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blueprints Database Dump</title>
+    <title>Database Dump | Blueprints</title>
     <link rel="icon" href="images/team-site/fish.svg">
     <link rel="stylesheet" href="css/team_styles.css">
 </head>
@@ -35,8 +35,8 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
 <div class="tablewrapper">
     <table>
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Email</th>
             <th>Password Hash</th>
             <th>Created At</th>
