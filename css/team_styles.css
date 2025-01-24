@@ -156,6 +156,40 @@ th{
     padding: 5px;
 }
 
+.full-img{
+    width: 100%;
+}
+
+.design-files{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.design-files div{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 24px;
+}
+
+.btn {
+    background: #E36D5A;
+    height: fit-content;
+    border-radius: 30px !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    color: #F4EFEB;
+    font-family: var(--Karla);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+}
+
 @media screen and (max-width: 576px) {
     body{
         margin: 50px 28px;
