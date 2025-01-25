@@ -30,7 +30,18 @@
         <a class="btn" href="https://www.figma.com/proto/aoznyxHy1f4gIs1dlGbXYb/216-Project?page-id=84%3A2&node-id=84-553&viewport=-278%2C433%2C0.29&t=NjhmB2a1XjqgMn5L-1&scaling=scale-down&content-scaling=fixed" target="_blank">View Prototype</a>
         <div>
             <h3>User Persona</h3>
-            <img class="full-img" src="images/project-page/UserPersona.png" alt="">
+            <picture>
+                <source 
+                media="(min-width: 1034px)" 
+                srcset="images/project-page/UserPersona.png">
+                
+                <source media="(min-width: 700px)" 
+                srcset="images/project-page/UserPersona-Tablet.png">
+                
+                <img class="full-img" 
+                src="images/project-page/UserPersona-Mobile.png" 
+                alt="User Persona">
+            </picture>
         </div>
         <div>
             <h3>Journey Map</h3>
@@ -38,11 +49,31 @@
         </div>
         <div>
             <h3>Style Guide</h3>
-            <img class="full-img" src="images/project-page/StyleGuide.png" alt="">
+            <picture>
+                <source media="(min-width: 1034px)" 
+                srcset="images/project-page/StyleGuide.png">
+
+                <source media="(min-width: 700px)" 
+                srcset="images/project-page/StyleGuide.png">
+
+                <img class="full-img" 
+                src="images/project-page/StyleGuide-Mobile.png" 
+                alt="Style Guide">
+            </picture>
         </div>
         <div>
             <h3>Critical Path</h3>
-            <img class="full-img" src="images/project-page/CriticalPath.png" alt="">
+            <picture>
+                <source media="(min-width: 1034px)" 
+                srcset="images/project-page/CriticalPath.png">
+
+                <source media="(min-width: 700px)" 
+                srcset="images/project-page/CriticalPath-Tablet.png">
+
+                <img class="full-img" 
+                src="images/project-page/CriticalPath-Mobile.png" 
+                alt="Critical Path">
+            </picture>
         </div>
 
     </div>
