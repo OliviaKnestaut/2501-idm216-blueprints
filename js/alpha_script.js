@@ -38,3 +38,9 @@ togglePasswordButtons.forEach((button) => {
     });
 });
 
+//Continue as Guest
+function continueAsGuest() {
+    localStorage.setItem('guestSession', 'true');
+    window.location.href = 'welcome.php';
+}
+
