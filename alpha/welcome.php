@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/alpha/main_styles.css">
-    <link rel="stylesheet" href="../css/alpha/login_styles.css">
+    <link rel="stylesheet" href="../css/alpha/welcome_styles.css">
     <title>Kim's Dragon</title>
 </head>
 <body>
@@ -20,14 +20,34 @@
         $userStatus = "Welcome, guest!";
     } 
     ?>
+    <img class="lantern-abs" src="../images/alpha/assets/lit-lantern.svg" alt="">
+    <img class="lantern-abs" src="../images/alpha/assets/lit-lantern.svg" alt="">
+
+    <?php include 'includes/header.php'; ?>
+
+    <div class="welcome-header">
+        <img class="welcome-dragon" src="../images/alpha/assets/dragon-logo.png" alt="">
+        <h1>Welcome!</h1>
+        <p>Authentic Flavors, On the Go!</p>
+        <a class="btn" href="main.php">View Menu</a>
+    </div>
+
+    <div class="welcome-content">
+
+    </div>
     
 
-    <h1>Welcome!</h1>
-    
 
+
+    
+    
+<!-- 
     <form action="includes/logout.php" method="post">
         <input type="submit" value="Logout" class="btn btn-danger">
     </form>
+-->
+
+    
 
 </body>
 </html>

@@ -1,0 +1,12 @@
+.menu-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-content{
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-blue);
+    margin-top: 8px;
+}

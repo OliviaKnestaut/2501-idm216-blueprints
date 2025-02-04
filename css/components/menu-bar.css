@@ -7,17 +7,16 @@
 }
 
 .hanging-bar {
-    width: 100vw;
+    width: 100%;
     height: 7.5px;
     background-color: var(--dark-red);
     position: absolute;
-    top: 20px;
+    top: 0;
 }
 
 .lantern-group {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
 }
 
 

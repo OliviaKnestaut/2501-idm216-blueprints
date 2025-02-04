@@ -22,6 +22,7 @@ html{
     --orangey: #E36D5A !important;
     --light-grey: #B1B1B1 !important;
     --dark-red: #7A2618 !important;
+    --body-text: #464646 !important;
 
     --Poppins: 'Poppins', Arial, sans-serif ;
     --Reem-Kufi-Ink: 'Reem-Kufi-Ink', Arial, sans-serif ;
@@ -32,11 +33,7 @@ html{
 }
 
 body{
-    position: relative;    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     z-index: -2;
     font-family: var(--Poppins);
     margin: 0 auto;
@@ -44,6 +41,16 @@ body{
     height: 874px;
     width: 430px;
     background-color: var(--background);
+}
+
+p{
+    color: var(--body-text);
+    font-family: var(--Poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    margin: 8px;
 }
 
 
@@ -75,4 +82,47 @@ h2{
     margin-top: 18px;
     color: var(--dark-blue);
     letter-spacing: 1px;
+}
+
+header{
+    background-color: var(--light-blue);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+header img{
+    height: 34px;
+}
+
+.btn{
+    color: var(--background);
+    font-family: var(--Poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    width: 282px;
+    border-radius: 50vw;
+    padding: 5px 16px;
+    background-color: var(--orangey);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.sml-btn{
+    width: fit-content;
+}
+
+@media screen and (max-width: 430px) {
+    body{
+        width: 100%;
+    }
 }
