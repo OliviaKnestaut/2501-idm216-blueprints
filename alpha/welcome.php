@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/alpha/main_styles.css">
     <link rel="stylesheet" href="../css/alpha/welcome_styles.css">
-    <title>Kim's Dragon</title>
+    <link rel="stylesheet" href="../css/components/nav-bar.css">
+    <title>Kim's Dragon | Welcome</title>
 </head>
 <body>
 
@@ -35,6 +36,9 @@
     <div class="welcome-content">
 
     </div>
+
+    <?php include 'includes/nav-bar.php'; ?>
+
     
 
 
