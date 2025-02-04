@@ -1,0 +1,128 @@
+header{
+    background-color: var(--light-blue);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+header img{
+    height: 34px;
+}
+h4{
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 300;
+}
+h3{
+    font-size: 20px;
+}
+body{
+    justify-content: start;
+}
+
+.item-image{
+    width: 70vw;
+    height: 250px;
+    max-width:300px;
+    border-radius: 16px;
+    margin-top: 24px;
+}
+/*--Item Descri[tion--*/
+.item-description{
+    background-color: var(--light-blue);
+    border-radius: 20px 20px 0px 0px;
+    margin: 24px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0px;
+}
+.item-description *{
+    margin: 10px 24px;
+}
+
+/*--Add On Div--*/
+.additional-selectors{
+    background-color: var(--dark-blue);
+    color: var(--background);
+    padding: 25px;
+
+    height: fit-content;
+    border-radius: 12px;
+    width: 80vw;
+    max-width: 400px;
+}
+.checkbox{
+    margin-top: 15px;
+}
+.extra-input{
+    margin-top: 15px;
+    display: block;
+}
+#add-note{
+    width: 100%;
+    border-radius: 12px;
+    height: 36px;
+    padding: 10px;
+    border: none;
+    justify-self: center;
+}
+
+
+/*--Bottom Div--*/
+.checkout-selection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: baseline;
+    margin: 20px;
+}
+
+.checkout-selection p{
+    font-size: 20px;
+}
+.btn {
+    background: var(--orangey);
+    height: fit-content;
+    width: 80vw;
+    max-width: 400px;
+    border-radius: 30px;
+    padding: 10px;
+
+    color: var(--background);
+    font-family: var(--Poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-selector{
+    height: fit-content;
+    border-radius: 30px;
+    padding: 5px 30px;
+    width: 30vw;
+    max-width: 200px;
+
+    color: var(--orangey);
+    background-color: var(--background);
+    font-family: var(--Poppins);
+    border: 2px solid var(--orangey);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+}
