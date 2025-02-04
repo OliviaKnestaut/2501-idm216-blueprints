@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--orangey); 
+  border-radius: 20px; 
+  padding: 5px 10px;
+  gap: 8px;
+}
+
+.quantity button {
+  background: none;
+  color: var(--orangey);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  transition: color 0.2s;
+  font-weight: bold;
+}
+
+.input-box {
+  width: 30px;
+  text-align: center;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  color: var(--orangey);
+  outline: none;
+}
+
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
