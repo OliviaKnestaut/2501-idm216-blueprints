@@ -44,3 +44,5 @@ function continueAsGuest() {
     window.location.href = 'welcome.php';
 }
 
+
+
