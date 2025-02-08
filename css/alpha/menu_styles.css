@@ -9,4 +9,47 @@
     height: 100%;
     background-color: var(--light-blue);
     margin-top: 8px;
+    padding-bottom: 20px;
+}
+
+.menu-item{
+    width: 90%;
+    background-color: var(--background);
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+}
+
+.menu-details{
+    width: 70%;
+    padding: 12px;
+}
+
+.menu-details p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1em;
+    max-height: 2em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+}
+
+.menu-details h2:first-child{
+    color: var(--black);
+}
+
+.menu-details h2:last-child{
+    color: var(--body-text);
+}
+
+
+.menu-image{
+    display: block;
+    background-image: url(../../images/menu-items/01_generaltsochicken.webp);
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
 }

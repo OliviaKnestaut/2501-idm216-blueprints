@@ -1,4 +1,5 @@
 <div class="lantern-wrapper">
+    
     <div class="hanging-bar"></div> <!-- Red bar above the lanterns -->
 
     <div class="lantern-group">
@@ -9,6 +10,7 @@
                 <img src="../images/menu-bar/off-lantern.svg" class="lantern">
             </div>
         </div>
+
     
         <!-- Sides -->
         <div class="lantern-category sides">

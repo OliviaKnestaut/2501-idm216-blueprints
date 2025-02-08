@@ -11,8 +11,9 @@
 
 <?php require_once 'alpha/includes/db.php';
     
-$result = mysqli_query($connection,"SELECT * FROM `idm-216_users`");
-$data = $result->fetch_all(MYSQLI_ASSOC);
+$resultusers = mysqli_query($connection,"SELECT * FROM `idm-216_users`");
+$userdata = $resultusers->fetch_all(MYSQLI_ASSOC);
+
 ?>
 
     <h1>Users Database Dump</h1>
@@ -32,6 +33,7 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
         alt="Row of simple blue fish swimming across the screen">
     </picture>
 
+<h3>idm-216_users</h3>
 <div class="tablewrapper">
     <table>
         <tr>
@@ -41,13 +43,41 @@ $data = $result->fetch_all(MYSQLI_ASSOC);
             <th>Password Hash</th>
             <th>Created At</th>
         </tr>
-        <?php foreach($data as $row): ?>
+        <?php foreach($userdata as $row): ?>
         <tr>
             <td><?= htmlspecialchars($row['firstname']) ?></td>
             <td><?= htmlspecialchars($row['lastname']) ?></td>
             <td><?= htmlspecialchars($row['username']) ?></td>
             <td><?= htmlspecialchars($row['password']) ?></td>
             <td><?= htmlspecialchars($row['created_at']) ?></td>
+        </tr>
+        <?php endforeach ?>
+    </table>
+</div>
+
+<?php
+$resultmenu = mysqli_query($connection,"SELECT * FROM `idm-216_menu`");
+$menudata = $resultmenu->fetch_all(MYSQLI_ASSOC); ?>
+
+<h3>idm-216_menu</h3>
+<div class="tablewrapper">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Diet</th>
+        </tr>
+        <?php foreach($menudata as $row): ?>
+        <tr>
+            <td><?= htmlspecialchars($row['id']) ?></td>
+            <td><?= htmlspecialchars($row['name']) ?></td>
+            <td><?= htmlspecialchars($row['description']) ?></td>
+            <td><?= htmlspecialchars($row['price']) ?></td>
+            <td><?= htmlspecialchars($row['category']) ?></td>
+            <td><?= htmlspecialchars($row['diet']) ?></td>
         </tr>
         <?php endforeach ?>
     </table>
