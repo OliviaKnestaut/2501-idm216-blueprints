@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Item Card</title>
     <link rel="stylesheet" href="../css/alpha/main_styles.css">
     <link rel="stylesheet" href="../css/alpha/item_card_styles.css">
-    <link rel="icon" href="">
 </head>
 <body>
     <header>
@@ -16,7 +15,7 @@
     <img src="../images/alpha/assets/stand-in-recipe-photo.jpeg" alt="Image of General Tso's Chicken" class="item-image">
     <div class="item-description">
         <h3>General Tso's Chicken</h3>
-        <img src="" alt="heart icon">
+        <img src="../images/alpha/assets/heart-icon.svg" alt="heart icon">
         <p>Earn +20 rewards points upon purchase</p>
         <p>Crispy fried chicken tossed in a tangy, sweet, and spicy sauce with a hint of garlic and ginger. Served over rice with special sauce.</p> 
     </div>
@@ -35,8 +34,23 @@
         </div>
     </div>
     <div class="checkout-selection">
-        <button class="btn-selector">+ 1 -</button> <p>9$</p>
-        <button class="btn">Add to Cart</button>
+        <div class="quantity">
+            <button class="minus" aria-label="Decrease">&minus;</button>
+            <input type="number" class="input-box" value="1" min="1" max="10">
+            <button class="plus" aria-label="Increase">&plus;</button>
+        </div>
+        <h3>9$</h3>
     </div>
+    <button class="btn">Add to Cart</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img src="../images/alpha/assets/dragon-logo.png" alt="dragon logo">
+            <p>Your General Tso's Chicken has been added to cart!</p>
+            <button class="cart-btn">Go to Cart</button>
+        </div>
+    </div>
+    <script src="../js/components/plus-minus-btn.js"></script>
+    <script src="../js/components/item-card-popup.js"></script>
 </body>
 </html>
