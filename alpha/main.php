@@ -15,29 +15,37 @@
     <?php require_once 'includes/db.php';
 
     $category = $_GET['category'] ?? 'Entree';
+    $diet = $_GET['diet'] ?? '';
 
     $allowed_categories = ['Entree', 'Sides', 'Soups', 'Drinks'];
     if (!in_array($category, $allowed_categories)) {
         $category = 'Entree'; // Default fallback
         }
 
-    $sql_query = "SELECT * FROM `idm-216_menu`";
-    $result = mysqli_query($connection, $sql_query);
+    $sql_query = "SELECT * FROM `idm-216_menu` WHERE category = ?";
+
+    // If a diet filter is applied, modify query to check within the comma-separated diet column
+    if (!empty($diet)) {
+        $sql_query .= " AND diet LIKE ?";
+    }
     
-    $menu_items = []; // Array to store all items
-    $filtered_items = []; // Array to store only the selected category's items
+    $stmt = mysqli_prepare($connection, $sql_query);
+    if (!empty($diet)) {
+        $diet_param = "%{$diet}%"; // Allow partial match within the comma-separated values
+        mysqli_stmt_bind_param($stmt, "ss", $category, $diet_param);
+    } else {
+        mysqli_stmt_bind_param($stmt, "s", $category);
+    }
     
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    
+    $filtered_items = [];
     if ($result) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $menu_items[] = $row;
-    
-            // Filter items by category
-            if ($row['category'] === $category) {
-                $filtered_items[] = $row;
-            }
+            $filtered_items[] = $row;
         }
     }
-
 
     ?>
     
@@ -45,14 +53,31 @@
 
     <div class="menu-header">
         <h1>Menu</h1>
-        <a class="btn sml-btn" href="main.php">Filters <img src="../images/alpha/assets/filter-icon.svg" alt=""></a>
+        <div class="btn sml-btn filter-btn" onclick="openFilterPopup()" id="filter-btn">Filters 
+            <img src="../images/alpha/assets/filter-icon.svg" alt="">
+        </div>
+        <div id="filter-popup" class="filter-popup">
+            <div class="filter-popup-content">
+                <div class="filter-options">
+                    <h3 onclick="applyFilter('')">All</h3>
+                    <h3 onclick="applyFilter('Gluten Free')">Gluten Free</h3>
+                    <h3 onclick="applyFilter('Vegetarian')">Vegetarian</h3>
+                    <h3 onclick="applyFilter('Vegan')">Vegan</h3>
+                    <h3 onclick="applyFilter('Pescatarian')">Pescatarian</h3>
+                </div>
+            </div>
+        </div>
+
+        
     </div>
+
+    
 
     <div class="menu-content">
         <?php include 'includes/menu-bar.php'; ?>
 
     <?php foreach ($filtered_items as $item) { ?>
-        <div class="menu-item">
+        <a class="menu-item" href="item_card.html">
 
             <?php
                 $image_folder = "../images/menu-items/";
@@ -74,13 +99,17 @@
                 <p><?php echo htmlspecialchars($item['description']) ?></p>
                 <h2>$<?php echo htmlspecialchars($item['price']) ?></h2>
             </div>
-        </div>
+        </a>
     <?php } ?>
+
 
     </div>
     
 
+ 
+
     <?php include 'includes/nav-bar.php'; ?>
+    <script src="../js/alpha_script.js"></script>
     
 </body>
 </html>

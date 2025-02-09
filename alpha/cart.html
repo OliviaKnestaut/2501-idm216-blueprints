@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim's Dragon | Cart</title>
+    <link rel="stylesheet" href="../css/components/plus-minus-btn.css">
+    <link rel="stylesheet" href="../css/components/main_components.css">
+    <link rel="stylesheet" href="../css/alpha/main_styles.css">
+    <link rel="stylesheet" href="../css/alpha/menu_styles.css">
+    <link rel="stylesheet" href="../css/alpha/cart_styles.css">
+    
+
+</head>
+<body>
+    <header>
+        <a class="left" href="main.php">
+            <img class="header-icon" src="../images/alpha/assets/back-icon.svg" alt="">
+        </a>
+        <img class="header-icon" src="../images/alpha/assets/tracking-icon.svg" alt="">
+        <img class="header-icon" src="../images/alpha/assets/cart-icon.svg" alt="">
+    </header>
+    <div class="menu-header">
+        <h1>Cart</h1>
+    </div>
+    <div class="cart-content">
+        <div class="menu-item">
+            <div class="menu-image" style="background-image: url('../images/menu-items/01_generaltsochicken.webp') !important"></div>
+            <div class="menu-details">
+                <h2>General Tso's Chicken</h2>
+                <h2 class="price">$9.00</h2>
+                <div class="item-settings">
+                    <a href="">Remove</a>
+                    <div class="quantity">
+                        <button class="minus" aria-label="Decrease">&minus;</button>
+                        <input type="number" class="input-box" value="1" min="1" max="10">
+                        <button class="plus" aria-label="Increase">&plus;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a class="btn2 sml-btn" href="main.php">Add More Items</a>
+
+    <div class="also-bought">
+        <h2>People Also Bought...</h2>
+        <div>
+            <div>
+                <span style="background-image: url('../images/menu-items/41_Thai Iced Tea.jpg') !important"></span>
+                <p>Thai Iced Tea</p>
+            </div>
+            <div>
+                <span style="background-image: url('../images/menu-items/29_Chicken Noodle Soup.jpg') !important"></span>
+                <p>Chicken Noodle Soup</p>
+            </div>
+            <div>
+                <span style="background-image: url('../images/menu-items/03_SesameChicken.jpeg') !important"></span>
+                <p>Sesame Chicken</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-details">
+        <h2>Total Summary</h2>
+        <div>
+            <p>Subtotal</p>
+            <p>$9.00</p>
+        </div>
+        <div>
+            <p>Fees</p>
+            <p>$1.08</p>
+        </div>
+        <div>
+            <p><strong>Total</strong></p>
+            <p><strong>$10.08</strong></p>
+        </div>
+        
+    </div>
+
+    <button class="btn">Pay Now</button>
+
+    <script src="../js/components/plus-minus-btn.js"></script>
+
+</body>
+</html>

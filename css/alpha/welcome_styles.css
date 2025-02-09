@@ -1,6 +1,11 @@
 body{
     position: relative;
 }
+
+.left{
+    visibility: hidden;
+}
+
 .welcome-dragon{
     width: 144px;
     padding-top: 8px;
@@ -12,6 +17,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.welcome-header .btn{
+    width: 282px;
 }
 
 .welcome-content{
@@ -56,7 +65,7 @@ body{
 }
 .fav-item h2{
     text-align: center;
-    margin: 9px;
+    margin: 5px 8px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
