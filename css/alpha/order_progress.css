@@ -1,0 +1,140 @@
+.dragon-logo-clouds {
+    padding-top: 18px;
+}
+
+.progress-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-title {
+    color: #000;
+    font-family: var(--Reem-Kufi-Ink);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    margin-top: 36px;
+    margin-bottom: 13px;
+}
+
+.progress-wrapper {
+    display: flex;
+    justify-content: center;  /* Horizontally center the progress bar */
+    align-items: center;      /* Vertically center the progress bar */        /* Ensure the wrapper takes up the full height of the viewport */
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 15px;
+    width: 0%;
+    background-color: #015582;
+    transition: width 1s ease-in-out;
+    z-index: 1;
+}
+.progress-track {
+    width: 99%;
+    height: 15px;
+    background-color: #C9DEEA;
+    border: 2px solid #015582;
+    position: absolute;
+    z-index: 0;
+}
+.step {
+    border-radius: 100%;
+    background-color: #fff;
+    border: 3px solid #015582;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.5s ease-in-out;
+}
+.step img {
+    width: 35px;
+    height: 35px;
+    transition: filter 0.5s ease-in-out;
+}
+.active {
+    background-color: #015582;
+}
+.active img {
+    filter: invert(1);
+}
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.order-info {
+    display: flex;
+    justify-content: center;  /* Horizontally center the progress bar */
+    align-items: center;  
+    background-color: #015582;
+    width: 90%;
+    height: 80px;
+    max-width: 500px;
+    border-radius: 6px;
+    margin-top: 21px;
+}
+
+.order-title {
+    color: var(--white);
+    text-align: center;
+    font-size: 16px;
+}
+
+.google-maps-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+}
+
+/* Making the image smaller and keeping it centered */
+.google-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-maps img {
+    display: block;
+    width: 90%; /* Adjust this value to make the image smaller or larger */
+}
+
+.go-to-maps-btn {
+    width: 90%;
+    margin-top: -5px;
+    padding: 5px 20px; /* Button size */
+    background-color: var(--dark-orange); /* Orange button */
+    border: none; /* No border */
+    border-top-left-radius: 0; /* Square top-left corner */
+    border-top-right-radius: 0; /* Square top-right corner */
+    border-bottom-left-radius: 10px; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 10px; /* Rounded bottom-right corner */
+    display: inline-flex; /* To keep the arrow aligned with text */
+    align-items: center; /* Vertically center the text and arrow */
+}
+
+.centered-text {
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+.order-number {
+    font-size: 96px;
+}
+
