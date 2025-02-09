@@ -69,7 +69,7 @@ h1{
 h2{
     color: var(--dark-blue);
     font-family: var(--Reem-Kufi-Ink);
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -79,7 +79,7 @@ h2{
 h3{
     color: var(--black);
     font-family: var(--Poppins);
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 24px */
@@ -105,9 +105,18 @@ header{
     justify-content: flex-end;
     align-items: center;
     gap: 12px;
+    max-height: 74px;
 }
 header img{
     height: 34px;
+}
+
+header a{
+    height: 34px;
+}
+
+header a.left{
+    margin-right: auto;
 }
 
 .btn{
@@ -119,6 +128,8 @@ header img{
     line-height: normal;
     text-align: center;
     text-decoration: none;
+    border: none;
+
     width: 282px;
     border-radius: 50vw;
     padding: 5px 16px;
@@ -129,9 +140,47 @@ header img{
     justify-content: center;
     align-items: center;
     gap: 8px;
+
+    height: fit-content;
+    width: 80vw;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0px auto 20px;
+}
+
+.btn2{
+    color: var(--orangey);
+    font-family: var(--Poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    border: 3px var(--orangey) solid;
+
+    border-radius: 50vw;
+    background-color: var(--background);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    height: fit-content;
+    width: 80vw;
+    max-width: 400px;
+    padding: 16px 24px;
+    margin: 0px auto 20px;
 }
 .sml-btn{
     width: fit-content;
+    z-index: 12;
+}
+
+.btn:hover{
+    cursor: pointer;
 }
 
 @media screen and (max-width: 430px) {

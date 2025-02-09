@@ -45,4 +45,24 @@ function continueAsGuest() {
 }
 
 
+let filter = "closed"
+function openFilterPopup() {
+
+    if (filter == 'closed'){
+        filter = 'open';
+        document.getElementById("filter-popup").style.visibility = "visible";
+        document.getElementsByClassName("filter-btn")[0].style.width = "250px";
+    }
+    else{
+        document.getElementById("filter-popup").style.visibility = "hidden";
+        document.getElementsByClassName("filter-btn")[0].style.width = "140px";
+        filter = 'closed';
+    }
+    
+}
+
+function applyFilter(diet) {
+    let category = "<?php echo $category); ?>"; // Get current category
+    window.location.href = `main.php?category=${category}&diet=${diet}`;
+}
 
