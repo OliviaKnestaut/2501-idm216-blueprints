@@ -117,7 +117,7 @@ header a{
     height: 34px;
 }
 
-header a.left{
+header div.left, header a.left{
     margin-right: auto;
 }
 
