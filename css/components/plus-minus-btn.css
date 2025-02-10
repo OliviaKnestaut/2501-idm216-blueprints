@@ -5,6 +5,7 @@
   border-radius: 50vw; 
   padding: 5px 10px;
   background-color: var(--background);
+  max-width: 100px;
 }
 
 .quantity button {
@@ -17,7 +18,7 @@
   height: 25px;
   text-align: center;
   transition: color 0.2s;
-  font-weight: bold;
+  font-weight: bold;;
 }
 
 .input-box {
