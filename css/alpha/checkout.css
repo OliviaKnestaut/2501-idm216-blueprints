@@ -7,10 +7,6 @@ body {
     margin: 19px auto;
 }
 
-h1 {
-    font-size: 24px;
-}
-
 .payment-name {
     font-size: 16px;
     padding: 8px;
@@ -137,10 +133,12 @@ h1 {
 
 .total-summary-item .left p{
     margin: 0;
+    color: var(--black);
 }
 
 .total-summary-item .right p{
     margin: 0;
+    color: var(--black);
 }
 
 .btn {
