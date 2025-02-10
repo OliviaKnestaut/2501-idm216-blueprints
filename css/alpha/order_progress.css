@@ -137,3 +137,6 @@
     font-size: 96px;
 }
 
+img.home{
+    filter: invert(94%) sepia(70%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%);
+}
