@@ -109,7 +109,7 @@
  
 
     <?php include 'includes/nav-bar.php'; ?>
-    <script src="../js/alpha_script.js"></script>
+    <script src="../js/alpha/alpha_script.js"></script>
     
 </body>
 </html>

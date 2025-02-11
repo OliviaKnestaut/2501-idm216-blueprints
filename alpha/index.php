@@ -68,7 +68,7 @@
         <img class="lantern-abs" src="../images/alpha/assets/lit-lantern.svg" alt="">
     </div>
 
-    <script src="../js/alpha_script.js"></script>
+    <script src="../js/alpha/alpha_script.js"></script>
     
 </body>
 

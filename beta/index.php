@@ -68,7 +68,7 @@
         <img class="lantern-abs" src="../images/beta/assets/lit-lantern.svg" alt="">
     </div>
 
-    <script src="../js/beta_script.js"></script>
+    <script src="../js/beta/beta_script.js"></script>
     
 </body>
 
