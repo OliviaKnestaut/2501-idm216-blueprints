@@ -38,4 +38,4 @@
     </div>
     
 
-<script src="../js/components/menu-bar.js"></script>
+<script src="../js/alpha/components/menu-bar.js"></script>

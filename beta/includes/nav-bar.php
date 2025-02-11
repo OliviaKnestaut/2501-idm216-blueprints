@@ -23,4 +23,4 @@
     </a>
 </nav>
 
-<script src="../js/components/nav-bar.js"></script>
+<script src="../js/beta/components/nav-bar.js"></script>
