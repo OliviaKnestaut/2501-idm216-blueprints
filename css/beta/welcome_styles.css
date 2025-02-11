@@ -1,0 +1,146 @@
+body{
+    position: relative;
+}
+
+.left{
+    visibility: hidden;
+}
+
+.welcome-dragon{
+    width: 144px;
+    padding-top: 8px;
+    margin-bottom: -8px;
+}
+
+.welcome-header{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-header .btn{
+    width: 282px;
+}
+
+.welcome-content{
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-blue);
+    margin-top: 8px;
+    padding-bottom: 20px;
+}
+
+.lantern-abs{
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+
+.lantern-abs:first-child{
+    top: 0px;
+    left: 12px;
+}
+
+.lantern-abs:nth-child(2){
+    top: 0px;
+    right: 12px;
+}
+
+.fav-item{
+    background-color: var(--background);
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+}
+.fav-image{
+    display: block;
+    background-image: url(../../images/menu-items/01_generaltsochicken.webp);
+    background-size: cover;
+    background-position: center;
+    width: 180px;
+    height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.fav-item h2{
+    text-align: center;
+    margin: 5px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--black);
+}
+
+.fav-item:first-child, .menu-item:first-child{
+    margin-left: 20px;
+}
+.fav-item:last-child, .menu-item:last-child{
+    margin-right: 20px;
+}
+
+.favorites, .points, .specials{
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    overflow-y: hidden; /* Prevents vertical overflow */
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.favorites::-webkit-scrollbar, .points::-webkit-scrollbar, .specials::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for a cleaner look */
+}
+
+.arrow{
+    font-size: 24px;
+    padding: 10px;
+    color: var(--black);
+    font-family: var(--Poppins);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+    padding: 0;
+}
+
+.category-text{
+    display: flex;
+    align-items: center;
+    
+}
+
+.category-text h3{
+    padding: 0;
+    margin: 20px;
+    margin-right: 10px;
+}
+
+.menu-item{
+    margin-top: 0 !important;
+    position: relative;
+    min-width: 350px !important;
+}
+
+/*Points*/
+.point-num{
+    position: absolute;
+    background-color: var(--yellow);
+    top: 5px;
+    left: 5px;
+    border-radius: 6px;
+    padding: 0 8px;
+}
+.point-num h2{
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+.menu-details span{
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+
+

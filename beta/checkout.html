@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim's Dragon | Checkout</title>
+    <link rel="stylesheet" href="../css/beta/main_styles.css">
+    <link rel="stylesheet" href="../css/beta/checkout.css">
+    </head>
+    <body>
+        <header>
+            <div class="left" onclick="javascript:window.history.back();">
+                <img class="header-icon" src="../images/beta/assets/back-icon.svg" alt="">
+            </div>
+            <img class="header-icon" src="../images/beta/assets/tracking-icon.svg" alt="">
+            <img class="header-icon" src="../images/beta/assets/cart-icon.svg" alt="">
+        </header>
+        <div class="checkout-container">
+            <h1>Checkout</h1>
+            <div class="payment-box">
+                <div class="payment-title">Payment</div>
+                <div class="payment-methods">
+                    <div class="payment-method add-payment">
+                        <img src="../images/beta/assets/card-icon.svg" alt="Card">
+                        <h3 class="payment-name">Add New Card Payment</h3>
+                        <img src="../images/beta/assets/add-payment-icon.svg" alt="Add">
+                    </div>
+                    <div class="payment-method">
+                        <img src="../images/beta/assets/paypal-icon.svg" alt="Paypal">
+                        <h3 class="payment-name">PayPal</h3>
+                    </div>
+                    <div class="payment-method">
+                        <img src="../images/beta/assets/venmo-icon.svg" alt="Venmo">
+                        <h3 class="payment-name">Venmo</h3>
+                    </div>
+                    <div class="payment-method">
+                        <img src="../images/beta/assets/apple-pay-icon.svg" alt="Apple Pay">
+                        <h3 class="payment-name">Apple Pay</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-box pickup-box">
+            <div class="payment-title">Pickup Information</div>
+            <div class="payment-methods">
+                <div class="pickup-details">
+                    <h3 class="pickup-label">Pickup At</h3>
+                    <p class="pickup-location">Kims Dragon Food Truck</p>
+                    <p class="pickup-address">3101-3141 Ludlow St</p>
+                    <h3 class="pickup-label">Food Ready By</h3>
+                    <p class="pickup-time">12:45pm</p>
+                </div>
+                <div class="schedule-pickup">
+                    <h3 class="pickup-label">Schedule Pickup</h3>
+                    <select class="pickup-select">
+                        <option selected disabled>select a time</option>
+                        <option>12:45pm</option>
+                        <option>1:00pm</option>
+                        <option>1:15pm</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="total-summary">
+            <h3>Total Summary</h3>
+            <div class="total-summary-item">
+                <div class="left"><p>Subtotal</p></div>
+                <div class="right"><p>$18.00</p></div>
+            </div>
+            <div class="total-summary-item">
+                <div class="left"><p>Fees</p></div>
+                <div class="right"><p>$1.08</p></div>
+            </div>
+            <div class="total-summary-item">
+                <div class="left"><p><strong>Total</strong></p></div>
+                <div class="right"><p><strong>$19.08</strong></p></div>
+            </div>
+        </div>
+        
+    
+    <a href="thank-you.html" class="btn">Submit Order</a>
+
+
+</body>
+</html>

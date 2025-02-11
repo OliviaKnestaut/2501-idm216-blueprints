@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/alpha/main_styles.css">
-    <link rel="stylesheet" href="../css/components/nav-bar.css">
+    <link rel="stylesheet" href="../css/alpha/components/nav-bar.css">
     <link rel="stylesheet" href="../css/alpha/welcome_styles.css">
     <link rel="stylesheet" href="../css/alpha/menu_styles.css">
 
