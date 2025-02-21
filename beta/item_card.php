@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="../css/beta/item_card_styles.css">
     <link rel="stylesheet" href="../css/beta/components/plus-minus-btn.css">
     <link rel="stylesheet" href="../css/beta/components/main_components.css">
+    <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
 </head>
 <body>
     <header>
         <a class="left" href="main.php">
             <img class="header-icon" src="../images/beta/assets/x-icon.svg" alt="">
         </a>
-        <img class="header-icon" src="../images/beta/assets/tracking-icon.svg" alt="">
         <a href="cart.html">
             <img class="header-icon" src="../images/beta/assets/cart-icon.svg" alt="">
         </a>
@@ -59,6 +59,7 @@
             <a href="cart.html" class="btn">Go to Cart</a>
         </div>
     </div>
+    <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/beta/components/plus-minus-btn.js"></script>
     <script src="../js/beta/components/item-card-popup.js"></script>
 </body>

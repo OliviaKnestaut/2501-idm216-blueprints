@@ -6,23 +6,26 @@
     <title>Kim's Dragon | Order Progress</title>
     <link rel="stylesheet" href="../css/beta/main_styles.css">
     <link rel="stylesheet" href="../css/beta/order_progress.css">
+    <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
 </head>
 <body>
     <header>
         <a class="left" href="main.php">
             <img class="header-icon home" src="../images/nav-bar/home.svg" alt="">
         </a>
-        <img class="header-icon" src="../images/beta/assets/tracking-icon.svg" alt="">
         <img class="header-icon" src="../images/beta/assets/cart-icon.svg" alt="">
     </header>
     <div class="progress-header">
         <img class="dragon-logo-clouds" src="../images/beta/assets/dragon-logo-clouds.svg" alt="">
-        <h1 class="progress-title">Order Ready for Pickup</h1>
+        <h1 class="progress-title">Thank You For Your Order!</h1>
         <div class="centered-text">
-            <p>YOUR ORDER NUMBER <br>show at pickup</p>
+            <p>Your order will be ready at: TIME</p>
         </div>
         <div class="centered-text">
             <h1 class="order-number">#420</h1>
+        </div>
+        <div class="centered-text">
+            <p>show at truck</p>
         </div>
     </div>
 
@@ -42,7 +45,8 @@
             <h3 class="order-title">Go to Maps to find 3101-3141 Ludlow St</h3>
         </button>
     </div>
-    
+    <?php include 'includes/nav-bar.php'; ?>
+
 
     <script src="../js/beta/components/loading-bar.js"></script>
     

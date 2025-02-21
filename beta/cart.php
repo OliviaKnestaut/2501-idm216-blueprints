@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/beta/main_styles.css">
     <link rel="stylesheet" href="../css/beta/menu_styles.css">
     <link rel="stylesheet" href="../css/beta/cart_styles.css">
-    
+    <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
 
 </head>
 <body>
@@ -17,7 +17,6 @@
         <div class="left" onclick="javascript:window.history.back();">
             <img class="header-icon" src="../images/beta/assets/back-icon.svg" alt="">
         </div>
-        <img class="header-icon" src="../images/beta/assets/tracking-icon.svg" alt="">
         <img class="header-icon" src="../images/beta/assets/cart-icon.svg" alt="">
     </header>
     <div class="menu-header">
@@ -78,7 +77,7 @@
         
     </div>
     <a href="checkout.html" class="btn">Pay Now</a>
-
+    <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/beta/components/plus-minus-btn.js"></script>
 
 </body>
