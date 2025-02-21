@@ -6,15 +6,15 @@
     <title>Kim's Dragon | Order Progress</title>
     <link rel="stylesheet" href="../css/beta/main_styles.css">
     <link rel="stylesheet" href="../css/beta/order_progress.css">
+    <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
 </head>
 <body>
     <header>
-        <img class="header-icon" src="../images/beta/assets/tracking-icon.svg" alt="">
         <img class="header-icon" src="../images/beta/assets/cart-icon.svg" alt="">
     </header>
     <div class="progress-header">
         <img class="dragon-logo-clouds" src="../images/beta/assets/dragon-logo-clouds.svg" alt="">
-        <h1 class="progress-title">Cooking Your Meal</h1>
+        <h1 class="progress-title">Thank You For Your Order!</h1>
     </div>
 
     <div class="progress-wrapper">
@@ -31,7 +31,7 @@
     </div>
     <div class="progress-wrapper">
         <div class="order-info">
-            <h3 class="order-title">Order Received ... <br>Estimated time for delivery: 10 mins</h3>
+            <h3 class="order-title">Order Received ... <br>Sending to Truck</h3>
         </div>
     </div>
 
@@ -43,7 +43,7 @@
             <h3 class="order-title">Go to Maps to find 3101-3141 Ludlow St</h3>
         </button>
     </div>
-    
+    <?php include 'includes/nav-bar.php'; ?>
 
     <script src="../js/beta/components/loading-bar.js"></script>
     
