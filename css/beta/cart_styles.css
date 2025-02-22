@@ -1,13 +1,18 @@
 body {
     margin-bottom: 0;
 }
+.x-icon{
+    display: none;
+}
 
 .left{
     visibility: visible;
 }
 .cart-content{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     background-color: var(--background);
     margin-top: 0;
     min-height: 0px;
@@ -53,18 +58,19 @@ body {
 }
 
 
-.also-bought div{
+.also-bought div, .also-bought a{
     display: flex;
     justify-content: space-evenly;
     gap: 8px;
 }
-.also-bought div div{
+.also-bought div a{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 120px;
     gap: 0;
+    text-decoration: none;
 }
 
 .also-bought span{
@@ -84,6 +90,10 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.order-details h2{
+.order-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 0;
     color: var(--black);
 }

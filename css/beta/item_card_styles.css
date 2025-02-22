@@ -45,6 +45,10 @@ h3{
     padding: 8px;
 }
 
+.back-icon{
+    display: none;
+}
+
 /*--Add On Div--*/
 .additional-selectors{
     background-color: var(--dark-blue);
@@ -96,7 +100,7 @@ h3{
     background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 5;
     width: 430px;
 }
 

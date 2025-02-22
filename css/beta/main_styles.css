@@ -150,6 +150,15 @@ header div.left, header a.left{
     margin: 0px auto 20px;
 }
 
+.fixed-btn{
+    position: fixed;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: 0 auto;
+}
+
 .btn2{
     color: var(--orangey);
     font-family: var(--Poppins);
@@ -183,6 +192,11 @@ header div.left, header a.left{
 
 .btn:hover{
     cursor: pointer;
+}
+
+.buffer{
+    width: 100%;
+    height: 125px;
 }
 
 @media screen and (max-width: 430px) {

@@ -29,6 +29,7 @@
       inputBox.value = value;
       updateButtonStates();
       handleQuantityChange();
+      updatePrice();
     }
   
     function increaseValue() {
@@ -37,6 +38,7 @@
       inputBox.value = value;
       updateButtonStates();
       handleQuantityChange();
+      updatePrice();
     }
   
     function handleQuantityChange() {
@@ -47,3 +49,21 @@
     }
   })();
   
+
+
+  //Total Calculations
+
+    const quantityInput = document.querySelector('.input-box');
+
+    const totalPriceElement = document.getElementById("total-price");
+    const basePrice = parseFloat(totalPriceElement.getAttribute("data-price"));
+
+    function updatePrice() {
+        let quantity = parseInt(quantityInput.value) || 1; // Default to 1 if empty
+        let total = (basePrice * quantity).toFixed(2);
+        totalPriceElement.textContent = `$${total}`;
+        addToCartButton.setAttribute("data-quantity", quantity);
+    }
+
+    // Update price on input change
+    quantityInput.addEventListener("input", updatePrice);

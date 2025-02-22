@@ -65,7 +65,7 @@
         <div class="favorites">
 
         <?php foreach ($filtered_items as $item) { ?>
-            <div class="fav-item">
+            <a class="fav-item" href="item_card.php?id=<?php echo $item['id']; ?>">
             <?php
                 $image_folder = "../images/menu-items/";
                 $id = str_pad($item['id'], 2, "0", STR_PAD_LEFT);
@@ -81,7 +81,7 @@
 
                 <div class="fav-image" style="background-image: url('<?php echo htmlspecialchars($image_file); ?>') !important"></div>
                 <h2><?php echo htmlspecialchars($item['name']) ?></h2>
-            </div>
+            </a>
 
         <?php } ?>
 
@@ -93,7 +93,7 @@
         <div class="points">
             <div class="menu-item">
                 <span class="point-num"><h2>40</h2></span>
-                <div class="menu-image" style="background-image: url('../images/menu-items/24_FriedDumplings.jpeg') !important"></div>
+                <div class="menu-image" style="background-image: url('../images/menu-items/24_FriedDumplings.png') !important"></div>
                 <div class="menu-details">
                     <h2>Fried Dumplings</h2>
                     <p>Six pork dumplings served in a tray</p>
@@ -103,7 +103,7 @@
 
             <div class="menu-item">
                 <span class="point-num"><h2>200</h2></span>
-                <div class="menu-image" style="background-image: url('../images/menu-items/03_SesameChicken.jpeg') !important"></div>
+                <div class="menu-image" style="background-image: url('../images/menu-items/03_SesameChicken.png') !important"></div>
                 <div class="menu-details">
                     <h2>Sesame Chicken</h2>
                     <p>Crispy chicken glazed with a sweet sesame sauce and topped with seeds</p>
@@ -113,7 +113,7 @@
 
             <div class="menu-item">
                 <span class="point-num"><h2>40</h2></span>
-                <div class="menu-image" style="background-image: url('../images/menu-items/30_Wonton Soup.webp') !important"></div>
+                <div class="menu-image" style="background-image: url('../images/menu-items/30_Wonton Soup.png') !important"></div>
                 <div class="menu-details">
                     <h2>Wonton Soup</h2>
                     <p>Shredded pork with egg noodle</p>
@@ -131,7 +131,7 @@
         <div class="specials">
             <div class="menu-item">
                 <span class="point-num"><h2>-25%</h2></span>
-                <div class="menu-image" style="background-image: url('../images/menu-items/36_House Special Soup.jpg') !important"></div>
+                <div class="menu-image" style="background-image: url('../images/menu-items/36_House Special Soup.png') !important"></div>
                 <div class="menu-details">
                     <h2>House Special Soup</h2>
                     <p>Chicken, beef, and shrimp with vegetables in a rich broth</p>
@@ -141,7 +141,7 @@
 
             <div class="menu-item">
                 <span class="point-num"><h2>-10%</h2></span>
-                <div class="menu-image" style="background-image: url('../images/menu-items/24_FriedDumplings.jpeg') !important"></div>
+                <div class="menu-image" style="background-image: url('../images/menu-items/24_FriedDumplings.png') !important"></div>
                 <div class="menu-details">
                     <h2>Fried Dumplings</h2>
                     <p>Six pork dumplings served in a tray</p>
@@ -151,7 +151,7 @@
 
             <div class="menu-item">
                 <span class="point-num"><h2>-15%</h2></span>
-                <div class="menu-image" style="background-image: url('../images/menu-items/40_Thai Coffee.jpg') !important"></div>
+                <div class="menu-image" style="background-image: url('../images/menu-items/40_Thai Coffee.png') !important"></div>
                 <div class="menu-details">
                     <h2>Thai Coffee</h2>
                     <p>Freshly brewed coffee served hot or cold</p>

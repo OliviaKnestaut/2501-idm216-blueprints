@@ -77,7 +77,7 @@
         <?php include 'includes/menu-bar.php'; ?>
 
     <?php foreach ($filtered_items as $item) { ?>
-        <a class="menu-item" href="item_card.html">
+        <a class="menu-item" href="item_card.php?id=<?php echo $item['id']; ?>">
 
             <?php
                 $image_folder = "../images/menu-items/";
