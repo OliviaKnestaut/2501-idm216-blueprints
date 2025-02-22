@@ -13,18 +13,14 @@
 
 </head>
 <body>
-    <header>
-        <div class="left" onclick="javascript:window.history.back();">
-            <img class="header-icon" src="../images/beta/assets/back-icon.svg" alt="">
-        </div>
-        <img class="header-icon" src="../images/beta/assets/cart-icon.svg" alt="">
-    </header>
+<?php include 'includes/header.php'; ?>
+
     <div class="menu-header">
         <h1>Cart</h1>
     </div>
     <div class="cart-content">
         <div class="menu-item">
-            <div class="menu-image" style="background-image: url('../images/menu-items/01_generaltsochicken.webp') !important"></div>
+            <div class="menu-image" style="background-image: url('../images/menu-items/01_generaltsochicken.png') !important"></div>
             <div class="menu-details">
                 <h2>General Tso's Chicken</h2>
                 <h2 class="price">$9.00</h2>
@@ -38,47 +34,49 @@
                 </div>
             </div>
         </div>
-
     </div>
+
     <a class="btn2 sml-btn" href="main.php">Add More Items</a>
 
     <div class="also-bought">
         <h2>People Also Bought...</h2>
         <div>
-            <div>
-                <span style="background-image: url('../images/menu-items/41_Thai Iced Tea.jpg') !important"></span>
+            <a href="item_card.php?id=41">
+                <span style="background-image: url('../images/menu-items/41_Thai Iced Tea.png') !important"></span>
                 <p>Thai Iced Tea</p>
-            </div>
-            <div>
-                <span style="background-image: url('../images/menu-items/29_Chicken Noodle Soup.jpg') !important"></span>
+            </a>
+            <a href="item_card.php?id=29">
+                <span style="background-image: url('../images/menu-items/29_Chicken Noodle Soup.png') !important"></span>
                 <p>Chicken Noodle Soup</p>
-            </div>
-            <div>
-                <span style="background-image: url('../images/menu-items/03_SesameChicken.jpeg') !important"></span>
+            </a>
+            <a href="item_card.php?id=03">
+                <span style="background-image: url('../images/menu-items/03_SesameChicken.png') !important"></span>
                 <p>Sesame Chicken</p>
-            </div>
+            </a>
         </div>
     </div>
 
     <div class="order-details">
-        <h2>Total Summary</h2>
-        <div>
+        <h3>Total Summary</h3>
+        <div class="subtotal">
             <p>Subtotal</p>
-            <p>$9.00</p>
+            <p>$0.00</p>
         </div>
-        <div>
-            <p>Fees</p>
-            <p>$1.08</p>
+        <div class="tax">
+            <p>Tax</p>
+            <p>$0.00</p>
         </div>
-        <div>
+        <div class="total">
             <p><strong>Total</strong></p>
-            <p><strong>$10.08</strong></p>
+            <p><strong>$0.00</strong></p>
         </div>
-        
     </div>
-    <a href="checkout.html" class="btn">Pay Now</a>
+    
+    <a href="checkout.php" class="btn fixed-btn">Pay Now</a>
+    <div class="buffer"></div>
     <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/beta/components/plus-minus-btn.js"></script>
+    <script src="../js/beta/beta_script.js"></script>
 
 </body>
 </html>

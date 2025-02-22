@@ -2,6 +2,10 @@ body {
     text-align: center;
 }
 
+.x-icon{
+    display: none;
+}
+
 .checkout-container {
     width: 350px;
     margin: 19px auto;
@@ -112,12 +116,12 @@ body {
     margin: 18px auto; 
 }
 
-
-.total-summary h3 {
+.order-details h3 {
     font-size: 20px;
     margin-bottom: 10px;
     text-align: left;
     padding: 0;
+    color: var(--black);
 }
 
 .total-summary-item {
@@ -145,4 +149,13 @@ body {
     margin: 30px auto 10px;
     width: 354px;
     height: 64px;
+}
+
+.order-details{
+    padding: 20px;
+    color: var(--black);
+}
+.order-details div{
+    display: flex;
+    justify-content: space-between;
 }
