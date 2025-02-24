@@ -1,0 +1,40 @@
+:root {
+    --dark-blue: #015582; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.order-tracking-banner {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; 
+    width: 364px;
+    border-radius: 15px;
+}
+
+.order-tracking-banner a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    padding: 10px 0; 
+}
+
+.pickup-time,
+.order-number {
+    margin: 0 10px;
+}
+
