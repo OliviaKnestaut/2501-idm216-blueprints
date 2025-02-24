@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim's Dragon | Menu Item</title>
-    <link rel="stylesheet" href="../css/beta/main_styles.css">
-    <link rel="stylesheet" href="../css/beta/item_card_styles.css">
-    <link rel="stylesheet" href="../css/beta/components/plus-minus-btn.css">
-    <link rel="stylesheet" href="../css/beta/components/main_components.css">
-    <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
-</head>
-<body>
 
 <?php
 require_once 'includes/db.php';
@@ -36,6 +25,21 @@ $id_padded = str_pad($item['id'], 2, "0", STR_PAD_LEFT);
 $files = glob($image_folder . $id_padded . "_*");
 $image_file = $files[0];
 ?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim's Dragon | <?php echo htmlspecialchars($item['name']); ?></title>
+    <link rel="stylesheet" href="../css/beta/main_styles.css">
+    <link rel="stylesheet" href="../css/beta/item_card_styles.css">
+    <link rel="stylesheet" href="../css/beta/components/plus-minus-btn.css">
+    <link rel="stylesheet" href="../css/beta/components/main_components.css">
+    <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
+    <link rel="icon"  type="image/png" href="../images/dragon-logo.png">
+</head>
+<body>
+
+
 
 <?php include 'includes/header.php'; ?>
 

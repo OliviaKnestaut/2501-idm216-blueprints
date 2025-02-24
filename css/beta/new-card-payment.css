@@ -12,7 +12,6 @@ body {
     justify-content: center;
     align-items: center;     
     box-sizing: border-box;
-
 }
 
 
@@ -31,6 +30,10 @@ input {
     border-radius: 10px;
     background-color: var(--light-blue);
     border: 2px solid var(--dark-blue);
+}
+
+.x-icon{
+    display: none;
 }
 
 /* ============================

@@ -16,6 +16,12 @@ body{
     margin-bottom: 0;
 }
 
+#popup p {
+    font-size: 20px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
 .item-image{
     display: block;
     background-image: url(../../images/menu-items/01_generaltsochicken.webp);

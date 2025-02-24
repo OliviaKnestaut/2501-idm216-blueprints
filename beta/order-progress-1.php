@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/beta/main_styles.css">
     <link rel="stylesheet" href="../css/beta/order_progress.css">
     <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
+    <link rel="icon"  type="image/png" href="../images/dragon-logo.png">
+
 </head>
 <body>
     <header>
