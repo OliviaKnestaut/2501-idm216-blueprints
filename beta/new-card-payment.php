@@ -6,8 +6,10 @@
     <title>Kim's Dragon | Payment Information</title>
     <link rel="stylesheet" href="../css/beta/main_styles.css">
     <link rel="stylesheet" href="../css/beta/new-card-payment.css">
-    </head>
-    <body>
+    <link rel="icon"  type="image/png" href="../images/dragon-logo.png">
+
+</head>
+<body>
     <?php include 'includes/header.php'; ?>
     
         <div class="payment-title">

@@ -6,8 +6,9 @@
     <title>Kim's Dragon | Checkout</title>
     <link rel="stylesheet" href="../css/beta/main_styles.css">
     <link rel="stylesheet" href="../css/beta/checkout.css">
-    </head>
-    <body>
+    <link rel="icon"  type="image/png" href="../images/dragon-logo.png">
+</head>
+<body>
     <?php include 'includes/header.php'; ?>
 
     <div class="checkout-container">

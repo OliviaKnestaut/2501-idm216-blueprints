@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim's Dragon | Cart</title>
+    <title>Kim's Dragon | My Cart</title>
     <link rel="stylesheet" href="../css/beta/components/plus-minus-btn.css">
     <link rel="stylesheet" href="../css/beta/components/main_components.css">
     <link rel="stylesheet" href="../css/beta/main_styles.css">
     <link rel="stylesheet" href="../css/beta/menu_styles.css">
     <link rel="stylesheet" href="../css/beta/cart_styles.css">
     <link rel="stylesheet" href="../css/beta/components/nav-bar.css">
-
+    <link rel="icon"  type="image/png" href="../images/dragon-logo.png">
 </head>
 <body>
 <?php include 'includes/header.php'; ?>

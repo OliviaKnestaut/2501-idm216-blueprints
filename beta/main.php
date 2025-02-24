@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/beta/menu_styles.css">
 
     <title>Kim's Dragon | Menu</title>
+    <link rel="icon"  type="image/png" href="../images/dragon-logo.png">
+
 </head>
 <body>
 

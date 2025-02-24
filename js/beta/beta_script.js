@@ -113,7 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let existingItem = cart.find(cartItem => cartItem.id === item.id);
 
         if (existingItem) {
-            existingItem.quantity = existingItem.quantity + 1;
+
+            const popupMessage = document.querySelector("#popup p");
+
+            if (popupMessage) {
+                popupMessage.textContent = "This item is already in your cart!";
+            }
         } else {
             cart.push(item);
         }
@@ -139,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderCart() {
         const cartContent = document.querySelector(".cart-content");
         if (!cartContent) {
-            console.error("Error: .cart-content not found in the DOM.");
             return;
         }
 
