@@ -100,6 +100,7 @@ $image_file = $files[0];
     <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/beta/components/plus-minus-btn.js"></script>
     <script src="../js/beta/components/item-card-popup.js"></script>
+    <script src="../js/beta/components/heart-icon.js"></script>
     <script src="../js/beta/beta_script.js"></script>
 
 </body>

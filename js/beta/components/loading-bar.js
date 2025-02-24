@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let progressBar = document.getElementById("progress-bar");
     let steps = document.querySelectorAll(".step");
     let stepCount = steps.length;
-    let stepWidth = 100 / (stepCount - 1);
+    let stepWidth = 95 / (stepCount - 1);
     
     steps.forEach((step, index) => {
         setTimeout(() => {

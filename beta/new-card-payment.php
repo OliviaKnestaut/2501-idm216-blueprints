@@ -110,6 +110,8 @@
     </body>
 
     <script src="../js/beta/beta_script.js"></script>
+    <script src="../js/beta/components/card-payment.js"></script>
+
 
 
 </body>

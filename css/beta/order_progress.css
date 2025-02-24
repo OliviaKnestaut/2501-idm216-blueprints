@@ -42,7 +42,7 @@
     z-index: 1;
 }
 .progress-track {
-    width: 99%;
+    width: 95%;
     height: 15px;
     background-color: #C9DEEA;
     border: 2px solid var(--dark-blue);
@@ -51,25 +51,35 @@
 }
 .step {
     border-radius: 100%;
-    background-color: #fff;
-    border: 3px solid var(--dark-blue);
+    background-color: var(--background);
+    border: 2px solid var(--dark-blue);
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 2;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease;
 }
-.step img {
-    width: 35px;
-    height: 35px;
-    transition: filter 0.5s ease-in-out;
+.step svg{
+    padding: 2px;
 }
+
+.step svg path{
+    transition: fill 0.5s ease;
+}
+
+.send-icon{
+    margin-left: 4px;
+}
+
 .active {
     background-color: var(--dark-blue);
 }
-.active img {
-    filter: invert(1);
+
+.active svg path{
+    fill: var(--background);
 }
 .steps-container {
     display: flex;
@@ -102,7 +112,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 13px;
-    padding-bottom: 50px
+    padding-bottom: 20px
 }
 
 .google-maps {
@@ -142,4 +152,17 @@
 
 img.home{
     filter: invert(94%) sepia(70%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%);
+}
+
+.menu-details-order h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-item{
+    width: 76%;
+}
+.item-settings{
+    width: 24%;
 }
