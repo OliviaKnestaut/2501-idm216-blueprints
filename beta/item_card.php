@@ -44,24 +44,27 @@ $image_file = $files[0];
 
     <div class="item-description">
         <h3><?php echo htmlspecialchars($item['name']); ?></h3>
-        <img src="../images/beta/assets/heart-icon.svg" alt="heart icon">
+        <img id="heart-icon" src="../images/beta/assets/heart-icon.svg" alt="heart icon">
         <p>Earn +20 rewards points upon purchase</p>
         <p><?php echo htmlspecialchars($item['description']); ?></p> 
     </div>
     <div class="additional-selectors">
         <h4>Customization</h4>
         <form action="#"> 
-            <label for="checkbox1">
-                <input type="checkbox" class="checkbox" id="checkbox1" name="options"> Add Chili Oil
-            </label><br>
-            <label for="checkbox2">
-                <input type="checkbox" class="checkbox" id="checkbox2" name="options"> Add Crispy Onions
-            </label>
+            <div class="form-group">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Add Chili Oil</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">Add Crispy Onions</label>
+            </div>
         </form>
         <div class="extra-input">
-            <input type="text" id="add-note" name="Name" placeholder="add note...">
+            <input type="text" id="add-note" name="Name" placeholder="add a note...">
         </div>
     </div>
+
     <div class="checkout-selection">
 
         <div class="quantity">

@@ -2,6 +2,10 @@ body {
     text-align: center;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .x-icon{
     display: none;
 }
@@ -39,20 +43,41 @@ body {
 
 .payment-method {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    justify-content: flex-start; 
     border-bottom: 4px solid var(--dark-blue);
     cursor: pointer;
-    padding: 0 15px; 
-}
-
-.payment-method:last-child {
-    border-bottom: none;
+    padding: 0 15px;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;  
+    height: 40px; 
+    box-sizing: border-box;  
+    border-bottom: 4px solid var(--dark-blue);
 }
 
 .payment-method img {
     width: 24px;
     height: 24px;
-    margin-right: 10px; 
+    margin-right: 10px;
+}
+
+.payment-name {
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Active state for the buttons */
+.payment-method:active {
+    background-color: var(--active-button);  /* Light blue shade */
+}
+
+/* Optional: Add a hover effect for better UX */
+.payment-method:hover {
+    background-color: var(--active-button);  /* A slightly lighter blue when hovering */
 }
 
 .add-payment {

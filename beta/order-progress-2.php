@@ -19,7 +19,7 @@
         <img class="dragon-logo-clouds" src="../images/beta/assets/dragon-logo-clouds.svg" alt="">
         <h1 class="progress-title">Thank You For Your Order!</h1>
         <div class="centered-text">
-            <p>Your order will be ready at: TIME</p>
+            <p>Your order will be ready at: 12:45pm</p>
         </div>
         <div class="centered-text">
             <h1 class="order-number">#420</h1>

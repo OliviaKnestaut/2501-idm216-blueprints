@@ -244,3 +244,77 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(localStorage.getItem("cart"));
     
 });
+
+
+/* ============================
+New card payment 
+============================= */
+document.addEventListener("DOMContentLoaded", function () {
+    const generatecard = document.getElementById('generatecard');
+    const cardBrand = document.getElementById('card-brand'); 
+    const name = document.getElementById('name');
+    const cardnumber = document.getElementById('cardnumber');
+    const expirationdate = document.getElementById('expirationdate');
+    const securitycode = document.getElementById('securitycode');
+
+    // Set a random card brand
+    const setCardBrand = function () {
+        const randomBrand = ["VISA", "MasterCard", "AMEX", "Discover"]; 
+        cardBrand.textContent = randomBrand[Math.floor(Math.random() * randomBrand.length)];
+    };
+
+    // Generate random 16-digit card number 
+    const randomCardNumber = function () {
+        let randomCard = '';
+        for (let i = 0; i < 16; i++) {
+            randomCard += Math.floor(Math.random() * 10);
+        }
+        cardnumber.value = formatCardNumber(randomCard);
+        cardnumber.dispatchEvent(new Event('input'));  // Trigger input to update card display
+    };
+
+    // Format card number with spaces 
+    const formatCardNumber = function (cardNumber) {
+        return cardNumber.replace(/(\d{4})(?=\d)/g, '$1 '); 
+    };
+
+    // Format expiration date
+    const formatExpirationDate = function () {
+        let formattedDate = expirationdate.value.replace(/\D/g, ''); 
+        if (formattedDate.length >= 3) {
+            formattedDate = formattedDate.slice(0, 2) + '/' + formattedDate.slice(2, 4); 
+        }
+        expirationdate.value = formattedDate;
+        document.getElementById('svgexpire').textContent = formattedDate || 'MM/YY'; 
+    };
+
+    // Update SVG text content 
+    const updateSVGText = function (inputElement, svgElementId, defaultValue) {
+        inputElement.addEventListener('input', function () {
+            document.getElementById(svgElementId).textContent = inputElement.value || defaultValue;
+        });
+    };
+
+    generatecard.addEventListener('click', function () {
+        setCardBrand();
+        randomCardNumber();
+    });
+
+    expirationdate.addEventListener('input', formatExpirationDate);
+
+    updateSVGText(name, 'svgname', 'JOHN DOE');
+    updateSVGText(cardnumber, 'svgnumber', '0123 4567 8910 1112');
+    updateSVGText(securitycode, 'svgsecurity', '985');
+});
+
+/* ============================
+Heart icon
+============================= */
+document.getElementById("heart-icon").addEventListener("click", function() {
+    var heartIcon = document.getElementById("heart-icon");
+    if (heartIcon.src.includes("heart-icon.svg")) {
+        heartIcon.src = "../images/beta/assets/heart-icon-filled.svg"; 
+    } else {
+        heartIcon.src = "../images/beta/assets/heart-icon.svg"; 
+    }
+});

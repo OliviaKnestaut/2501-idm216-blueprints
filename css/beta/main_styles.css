@@ -27,6 +27,8 @@ html{
     --white: #FFFCF9 !important;
     --dark-orange: #B93F2B !important;
     --body-text: #464646 !important;
+    --active-button: #FFDDA8 !important;
+    --nav-bar: #EE9C1E !important;
 
     --Poppins: 'Poppins', Arial, sans-serif ;
     --Reem-Kufi-Ink: 'Reem-Kufi-Ink', Arial, sans-serif ;
