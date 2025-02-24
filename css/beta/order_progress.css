@@ -75,6 +75,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-left: -2px;;
 }
 
 .order-info {
@@ -101,6 +102,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 13px;
+    padding-bottom: 50px
 }
 
 .google-maps {
@@ -131,6 +133,7 @@
 .centered-text {
     text-align: center;
     margin-bottom: -20px;
+    margin-top: -15px;
 }
 
 .order-number {

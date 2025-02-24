@@ -7,7 +7,7 @@ h3{
     font-size: 20px;
 }
 p{
-    padding: 10px;
+    padding: 3px 10px;
 }
 body{
     justify-content: start;
@@ -39,7 +39,7 @@ body{
     
 }
 .item-description *{
-    margin: 10px 20px;
+    margin: 5px 20px;;
 }
 h3{
     padding: 8px;
@@ -135,6 +135,7 @@ h3{
     justify-content: space-between;
     align-items: baseline;
     margin: 20px 30px;
+    padding-bottom: 30px;
 }
 
 .checkout-selection p{
