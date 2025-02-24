@@ -171,13 +171,13 @@ a {
 }
 
 .btn {
-    margin: 30px auto 10px;
+    margin: 0 auto;
     width: 354px;
     height: 64px;
 }
 
 .order-details{
-    padding: 20px;
+    padding: 20px 40px;
     color: var(--black);
 }
 .order-details div{

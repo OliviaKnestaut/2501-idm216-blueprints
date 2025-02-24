@@ -256,23 +256,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardnumber = document.getElementById('cardnumber');
     const expirationdate = document.getElementById('expirationdate');
     const securitycode = document.getElementById('securitycode');
-
-    // Set a random card brand
-    const setCardBrand = function () {
-        const randomBrand = ["VISA", "MasterCard", "AMEX", "Discover"]; 
-        cardBrand.textContent = randomBrand[Math.floor(Math.random() * randomBrand.length)];
-    };
-
-    // Generate random 16-digit card number 
-    const randomCardNumber = function () {
-        let randomCard = '';
-        for (let i = 0; i < 16; i++) {
-            randomCard += Math.floor(Math.random() * 10);
-        }
-        cardnumber.value = formatCardNumber(randomCard);
-        cardnumber.dispatchEvent(new Event('input'));  // Trigger input to update card display
-    };
-
+    
+    cardnumber.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ''); 
+        value = value.slice(0, 16); // Limit to 16 digits
+        value = value.replace(/(\d{4})(?=\d)/g, '$1 '); // Add spaces after every 4 digits
+        e.target.value = value; 
+        document.getElementById('svgnumber').textContent = value || '0123 4567 8910 1112';
+    });
+    
     // Format card number with spaces 
     const formatCardNumber = function (cardNumber) {
         return cardNumber.replace(/(\d{4})(?=\d)/g, '$1 '); 
@@ -295,13 +287,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
-    generatecard.addEventListener('click', function () {
-        setCardBrand();
-        randomCardNumber();
-    });
-
+    // Format expiration date input
     expirationdate.addEventListener('input', formatExpirationDate);
 
+    // Update SVG text for the inputs
     updateSVGText(name, 'svgname', 'JOHN DOE');
     updateSVGText(cardnumber, 'svgnumber', '0123 4567 8910 1112');
     updateSVGText(securitycode, 'svgsecurity', '985');

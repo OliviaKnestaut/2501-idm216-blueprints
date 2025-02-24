@@ -159,6 +159,8 @@ header div.left, header a.left{
     transform: translateX(-50%);
     z-index: 3;
     margin: 0 auto;
+    width: 88vw;
+    height: 64px;
 }
 
 .btn2{
