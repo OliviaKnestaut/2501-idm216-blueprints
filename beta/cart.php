@@ -16,24 +16,10 @@
 <?php include 'includes/header.php'; ?>
 
     <div class="menu-header">
-        <h1>Cart</h1>
+    <h1>Cart</h1>
     </div>
     <div class="cart-content">
-        <div class="menu-item">
-            <div class="menu-image" style="background-image: url('../images/menu-items/01_generaltsochicken.png') !important"></div>
-            <div class="menu-details">
-                <h2>General Tso's Chicken</h2>
-                <h2 class="price">$9.00</h2>
-                <div class="item-settings">
-                    <a href="">Remove</a>
-                    <div class="quantity">
-                        <button class="minus" aria-label="Decrease">&minus;</button>
-                        <input type="number" class="input-box" value="1" min="1" max="10">
-                        <button class="plus" aria-label="Increase">&plus;</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     <a class="btn2 sml-btn" href="main.php">Add More Items</a>

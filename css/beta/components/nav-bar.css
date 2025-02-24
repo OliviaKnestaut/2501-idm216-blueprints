@@ -13,7 +13,11 @@
 
 /* Default icon color - white */
 .icon {
-    fill: #ffffff; /* Default color for all icons */
+    fill: var(--background); /* Default color for all icons */
+}
+
+.disabled .icon{
+    fill: var(--background) !important;
 }
 
 /* Active state color */

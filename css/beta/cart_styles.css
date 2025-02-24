@@ -8,7 +8,7 @@ body {
 .left{
     visibility: visible;
 }
-.cart-content{
+.cart-content, .order-content{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -96,4 +96,12 @@ body {
     text-align: left;
     padding: 0;
     color: var(--black);
+}
+.menu-details-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 4px 0;
+    padding-right: 8px;
 }

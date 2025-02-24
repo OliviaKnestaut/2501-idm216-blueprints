@@ -163,22 +163,20 @@
             
         </div>
     </div>
+    <a class="recent-order" href="order-progress-2.php">
+        <img class="recent-lantern" src="../images/nav-bar/recent-order-lantern.svg" alt="">
+        <div>
+            <h2 class="order-number2">Recent Order: #333</h2>
+            <p class="pickup-time2">Ready at 12:45pm</p>
+        </div>
+        <span class="recent-arrow">></span>
+    </a>
+
+    <div class="recent-buffer"></div>
 
     <?php include 'includes/nav-bar.php'; ?>
+    <script src="../js/beta/order-placed.js"></script>
 
-    
-
-
-
-    
-    
-<!-- 
-    <form action="includes/logout.php" method="post">
-        <input type="submit" value="Logout" class="btn btn-danger">
-    </form>
--->
-
-    
 
 </body>
 </html>

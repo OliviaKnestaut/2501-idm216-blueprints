@@ -144,5 +144,46 @@ body{
     font-weight: 400;
 }
 
+.recent-order{
+    visibility: hidden;
+    width: 100%;
+    max-width: 430px;
+    height: 75px;
+    background-color: var(--dark-orange);
+    position: fixed;
+    bottom: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+}
+.recent-buffer{
+    display: none;
+    width: 100%;
+    height: 75px;
+}
 
+.recent-order img{
+    height: 125px;
+    margin-left: -10px;
+}
+.recent-order div{
+    width: 80%;
+}
+
+.recent-order div h2, .recent-order div p{
+    color: var(--background) !important;
+    margin: 5px;
+}
+
+.recent-arrow{
+    font-size: 60px;
+    padding: 10px;
+    color: var(--background);
+    font-family: var(--Poppins);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
 
