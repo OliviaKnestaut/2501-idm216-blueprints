@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let orderNumber = generateOrderNumber();
         localStorage.setItem("order-number", orderNumber);
-
-        let pickUpTime = generatePickUpTime();
-        localStorage.setItem("pickup-time", pickUpTime);
         
         placeOrder();
     }
@@ -30,21 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateOrderNumber() {
         return Math.floor(100 + Math.random() * 900);
-    }
-
-    function generatePickUpTime() {
-        let now = new Date(); // Get the current date and time
-        now.setMinutes(now.getMinutes() + 20); // Add 20 minutes
-    
-        // Format the time as HH:MM AM/PM
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        let ampm = hours >= 12 ? "PM" : "AM";
-    
-        hours = hours % 12 || 12; // Convert 24-hour time to 12-hour format
-        minutes = minutes.toString().padStart(2, "0"); // Ensure two-digit minutes
-    
-        return `${hours}:${minutes} ${ampm}`;
     }
     
     function placeOrder() {

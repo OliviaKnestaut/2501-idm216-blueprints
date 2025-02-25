@@ -1,0 +1,168 @@
+.dragon-logo-clouds {
+    padding-top: 18px;
+}
+
+.progress-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-title {
+    color: #000;
+    font-family: var(--Reem-Kufi-Ink);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    margin-top: 36px;
+    margin-bottom: 13px;
+}
+
+.progress-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 15px;
+    width: 0%;
+    background-color: var(--dark-blue);
+    transition: width 1s ease-in-out;
+    z-index: 1;
+}
+.progress-track {
+    width: 95%;
+    height: 15px;
+    background-color: #C9DEEA;
+    border: 2px solid var(--dark-blue);
+    position: absolute;
+    z-index: 0;
+}
+.step {
+    border-radius: 100%;
+    background-color: var(--background);
+    border: 2px solid var(--dark-blue);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.5s ease;
+}
+.step svg{
+    padding: 2px;
+}
+
+.step svg path{
+    transition: fill 0.5s ease;
+}
+
+.send-icon{
+    margin-left: 4px;
+}
+
+.active {
+    background-color: var(--dark-blue);
+}
+
+.active svg path{
+    fill: var(--background);
+}
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: -2px;;
+}
+
+.order-info {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    background-color: var(--dark-blue);
+    width: 90%;
+    height: 80px;
+    max-width: 500px;
+    border-radius: 6px;
+    margin-top: 21px;
+}
+
+.order-title {
+    color: var(--white);
+    text-align: center;
+    font-size: 16px;
+}
+
+.google-maps-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+    padding-bottom: 20px
+}
+
+.google-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-maps img {
+    display: block;
+    width: 90%; 
+}
+
+.go-to-maps-btn {
+    width: 90%;
+    margin-top: -5px;
+    padding: 5px 20px;
+    background-color: var(--dark-orange); 
+    border: none; 
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.centered-text {
+    text-align: center;
+    margin-bottom: -20px;
+    margin-top: -15px;
+}
+
+.order-number {
+    font-size: 96px;
+}
+
+img.home{
+    filter: invert(94%) sepia(70%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%);
+}
+
+.menu-details-order h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-item{
+    width: 76%;
+}
+.item-settings{
+    width: 24%;
+}

@@ -249,7 +249,73 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
+if (window.location.pathname.includes("checkout.php")) {
+    let cardNumber = localStorage.getItem("card-number");
+    let paymentMethods = document.querySelectorAll(".payment-method");
+    let submitButton = document.getElementById("submit-order"); // Select the submit button
+    let paymentError = document.getElementById("payment-error");
+
+    paymentMethods.forEach(method => {
+        method.addEventListener("click", function () {
+            if (this.classList.contains("selected")) {
+                this.classList.remove("selected");
+                return;
+            }
+
+            paymentMethods.forEach(m => m.classList.remove("selected"));
+
+            // Add "selected" class to the clicked payment method
+            this.classList.add("selected");
+        });
+    });
+
+    submitButton.addEventListener("click", function (event) {
+        let selectedMethod = document.querySelector(".payment-method.selected");
+        
+        
+        if (!selectedMethod) {
+            event.preventDefault();
+            paymentError.style.display = "block";
+            return;
+        } else{
+            error.style.display = "none";
+        }
+    });
+
+    
+
+    let pickUpTime = generatePickUpTime();
+    localStorage.setItem("pickup-time", pickUpTime);
+
+    document.querySelector(".pickup-time").textContent = `${localStorage.getItem("pickup-time")}`;
+
+    if (cardNumber) { // Ensure cardNumber exists
+        let lastFourDigits = cardNumber.slice(-4);
+        document.getElementById("card-payment").textContent = `Card ${lastFourDigits}`;
+
+        paymentMethods.forEach(m => m.classList.remove("selected"));
+        document.getElementById("card-payment-btn").classList.add("selected");
+    }
+
+    console.log(cardNumber);
+}
+
 if (window.location.pathname === "/~ojk25/idm216/beta/" || window.location.pathname.includes("index.php")) {
     localStorage.clear();
     console.log("Local Storage cleared");
+}
+
+function generatePickUpTime() {
+    let now = new Date(); // Get the current date and time
+    now.setMinutes(now.getMinutes() + 20); // Add 20 minutes
+
+    // Format the time as HH:MM AM/PM
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let ampm = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12 || 12; // Convert 24-hour time to 12-hour format
+    minutes = minutes.toString().padStart(2, "0"); // Ensure two-digit minutes
+
+    return `${hours}:${minutes} ${ampm}`;
 }

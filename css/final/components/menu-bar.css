@@ -1,0 +1,60 @@
+.lantern-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hanging-bar {
+    width: 100%;
+    height: 7.5px;
+    background-color: var(--dark-red);
+    position: absolute;
+    top: 0;
+}
+
+.lantern-group {
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (max-width: 400px) {
+    .lantern-group {
+        gap: 5px;
+    }
+}
+
+.lantern-container {
+    position: relative;
+    width: 89px; 
+    height: 120px;
+    cursor: pointer;
+}
+
+.lantern-text {
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: white; 
+    text-align: center;
+    z-index: 2; 
+}
+
+
+.light {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.light.show {
+    opacity: 1;
+}
+

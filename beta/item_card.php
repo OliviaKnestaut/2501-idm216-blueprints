@@ -93,7 +93,7 @@ $image_file = $files[0];
         <div class="popup-content">
             <span class="close-btn"><img class="header-icon" src="../images/beta/assets/x-icon.svg" alt=""></span>
             <img src="../images/beta/assets/dragon-logo.png" alt="dragon logo">
-            <p>Your General Tso's Chicken has been added to cart!</p>
+            <p>Your <?php echo htmlspecialchars($item['name']); ?> has been added to cart!</p>
             <a href="cart.php" class="btn">Go to Cart</a>
         </div>
     </div>
