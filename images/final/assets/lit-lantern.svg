@@ -1,0 +1,23 @@
+<svg width="143" height="239" viewBox="0 0 143 239" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M72 132.026L72 66.0131L72 0" stroke="#7A2618" stroke-width="2.5"/>
+<path d="M52.1206 199.347C39.201 189.143 21.1135 162.612 52.1206 138.122V132H90.8794V138.122C121.886 163.429 103.799 189.483 90.8794 199.347V204.449H80.6797H71.5H62.3203H52.1206V199.347Z" fill="#B93F2B"/>
+<path d="M52.1206 199.347C39.201 189.143 21.1135 162.612 52.1206 138.122M52.1206 199.347C41.5129 177.306 47.7007 149.347 52.1206 138.122M52.1206 199.347H90.8794M52.1206 199.347V204.449M52.1206 138.122H90.8794M52.1206 138.122V132H90.8794V138.122M90.8794 138.122C121.886 163.429 103.799 189.483 90.8794 199.347M90.8794 138.122C95.6393 149.347 102.303 177.306 90.8794 199.347M90.8794 199.347V204.449M90.8794 204.449V221.796M90.8794 204.449H80.6797M52.1206 204.449V221.796M52.1206 204.449H62.3203M62.3203 204.449V232M62.3203 204.449H71.5M80.6797 204.449V232M80.6797 204.449H71.5M71.5 204.449V223.837" stroke="#7A2618" stroke-width="1.5"/>
+<g filter="url(#filter0_f_175_4672)">
+<ellipse cx="71.4651" cy="167.731" rx="24.3634" ry="23.9433" fill="#FFB919"/>
+</g>
+<g filter="url(#filter1_f_175_4672)">
+<ellipse cx="71.4651" cy="167.731" rx="24.3634" ry="23.9433" fill="#FFB919"/>
+</g>
+<defs>
+<filter id="filter0_f_175_4672" x="0.101723" y="96.7877" width="142.727" height="141.887" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="23.5" result="effect1_foregroundBlur_175_4672"/>
+</filter>
+<filter id="filter1_f_175_4672" x="0.101723" y="96.7877" width="142.727" height="141.887" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="23.5" result="effect1_foregroundBlur_175_4672"/>
+</filter>
+</defs>
+</svg>

@@ -42,11 +42,11 @@ a {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    background-color: var(--dark-blue);
+    background-color: var(--background);
 }
 
 .payment-method {
-    background-color: var(--background) !important;
+    background-color: var(--background);
     display: flex;
     align-items: center;
     justify-content: flex-start; 
@@ -74,9 +74,10 @@ a {
 }
 
 /* Active state for the buttons */
-.payment-method:active {
-    background-color: var(--active-button);  /* Light blue shade */
+.selected {
+    background-color: var(--light-blue) !important;  /* Light blue shade */
 }
+
 
 /* Optional: Add a hover effect for better UX */
 .payment-method:hover {
@@ -187,4 +188,10 @@ a {
 .order-details div{
     display: flex;
     justify-content: space-between;
+}
+
+#payment-error{
+    color: var(--dark-orange);
+    font-size: 20px;
+    display: none;
 }

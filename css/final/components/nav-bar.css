@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 430px;
+    height: 75px;
+    background-color: var(--dark-blue);
+    position: fixed;
+    bottom: 0;
+    padding: 8px 0;
+    margin: 0 auto;
+}
+
+/* Default icon color - white */
+.icon {
+    fill: var(--background); /* Default color for all icons */
+}
+
+/* Active state color */
+.nav-item.active .icon {
+    fill: var(--nav-bar); /* Color when icon is active */
+    transition: fill 0.3s ease; /* Smooth color transition */
+    
+}
+
+@media screen and (max-width: 430px) {
+    .navbar{
+        width: 100%;
+    }
+}

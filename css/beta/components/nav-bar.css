@@ -16,10 +16,6 @@
     fill: var(--background); /* Default color for all icons */
 }
 
-.disabled .icon{
-    fill: var(--background) !important;
-}
-
 /* Active state color */
 .nav-item.active .icon {
     fill: var(--nav-bar); /* Color when icon is active */

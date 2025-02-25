@@ -1,0 +1,197 @@
+body {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.x-icon{
+    display: none;
+}
+
+.checkout-container {
+    width: 350px;
+    margin: 19px auto;
+}
+
+.payment-name {
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+    text-align: left; 
+}
+
+.payment-box {
+    background-color: var(--dark-blue);
+    padding: 20px 6px 6px;
+    border-radius: 10px;
+}
+
+.payment-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--background);
+}
+
+.payment-method {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    cursor: pointer;
+    padding: 0 15px;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;  
+    height: 40px; 
+    box-sizing: border-box;  
+}
+
+.payment-method img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.payment-name {
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Active state for the buttons */
+.selected {
+    background-color: var(--light-blue) !important;  /* Light blue shade */
+}
+
+
+/* Optional: Add a hover effect for better UX */
+.payment-method:hover {
+    background-color: var(--active-button);  /* A slightly lighter blue when hovering */
+}
+
+.add-payment {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 100%;
+}
+
+.add-payment img:last-child {
+    margin-left: auto; 
+}
+
+.pickup-box {
+    width: 100%; 
+    max-width: 350px; 
+    margin: 0 auto; 
+    background-color: var(--dark-blue); 
+    padding: 20px 6px 6px; 
+    border-radius: 10px;
+}
+
+.pickup-details {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--background);
+}
+
+.pickup-label {
+    font-weight: bold;
+    padding: 11px 0 11px;
+}
+
+.pickup-location, .pickup-address, .pickup-time {
+    margin: 2px 0;
+}
+
+.schedule-pickup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px; 
+}
+
+.pickup-select {
+    padding: 5px 15px; 
+    margin-left: 10px; 
+    border: 3px solid var(--orangey);
+    border-radius: 20px;
+    font-size: 16px;
+    color: #B1B1B1;
+    width: 100%;
+    max-width: 150px;
+}
+
+.total-summary {
+    width: 100%; 
+    max-width: 350px; 
+    margin-top: 30px;
+    border-radius: 10px;
+    margin: 18px auto; 
+}
+
+.order-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 0;
+    color: var(--black);
+}
+
+.total-summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 4px 0;
+}
+
+.total-summary-item:last-child {
+    border-bottom: none;
+}
+
+.total-summary-item .left p{
+    margin: 0;
+    color: var(--black);
+}
+
+.total-summary-item .right p{
+    margin: 0;
+    color: var(--black);
+}
+
+.btn {
+    margin: 0 auto;
+    width: 354px;
+    height: 64px;
+}
+
+.order-details{
+    padding: 20px 40px;
+    color: var(--black);
+}
+.order-details div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#payment-error{
+    color: var(--dark-orange);
+    font-size: 20px;
+    display: none;
+}

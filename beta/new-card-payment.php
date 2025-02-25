@@ -93,7 +93,6 @@
                     <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric">
                     <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
-
                     </svg>
                 </div>
                 <div class="field-container">
@@ -106,11 +105,14 @@
                 </div>
             </div>
         </div>
-        <a href="checkout.php" class="btn">Add Card Payment</a>
+        <p id="card-error">Invalid card details</p>
+        <button id="saveCardDetails" class="btn">Add Card Payment</button>
     </body>
 
     <script src="../js/beta/beta_script.js"></script>
     <script src="../js/beta/components/card-payment.js"></script>
+    <script src="../js/beta/components/card-details.js"></script>
+
 
 
 

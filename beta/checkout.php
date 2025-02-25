@@ -17,9 +17,9 @@
             <div class="payment-title">Payment</div>
             <div class="payment-methods">
                 <a href="new-card-payment.php">
-                    <button class="payment-method add-payment">
+                    <button id="card-payment-btn" class="payment-method add-payment">
                         <img src="../images/beta/assets/card-icon.svg" alt="Card">
-                        <h3 class="payment-name">Add New Card Payment</h3>
+                        <h3 id="card-payment" class="payment-name">Add New Card Payment</h3>
                         <img src="../images/beta/assets/add-payment-icon.svg" alt="Add">
                     </button>
                 </a>
@@ -38,8 +38,6 @@
             </div>
         </div>
     </div>
-
-
 
         <div class="payment-box pickup-box">
             <div class="payment-title">Pickup Information</div>
@@ -70,8 +68,9 @@
             </div>
         </div>
         
+        <p id="payment-error">Please Select a Payment Method</p>
     
-    <a href="order-progress-1.php" class="btn">Submit Order</a>
+    <a id="submit-order" href="order-progress-1.php" class="btn">Submit Order</a>
 
     <script src="../js/beta/beta_script.js"></script>
 
