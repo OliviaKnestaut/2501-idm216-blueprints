@@ -1,0 +1,16 @@
+.x-icon, .back-icon{
+    display: none;
+}
+
+.rewards-display{
+    width: 90%;
+    height: fit-content;
+    background: var(--dark-blue);
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.rawards-display p{
+    color: var(--white);
+}
