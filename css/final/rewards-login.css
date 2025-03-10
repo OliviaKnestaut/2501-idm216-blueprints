@@ -1,0 +1,78 @@
+.x-icon, .back-icon{
+    display: none;
+}
+
+.rewards-display{
+    width: 90%;
+    height: fit-content;
+    background: var(--dark-blue);
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+    background-image: url("../../images/final/assets/rewards_background.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 10px -10px;
+    margin-bottom: 18px;
+}
+
+.points-section{
+    padding-top: 200px;
+}
+.scan-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.white-text{
+    color: var(--white);
+    padding-top: 200px;
+    padding-bottom:18px;
+}
+
+.rewards-menu{
+    background-color: var(--light-blue);
+    display: block;
+    margin: auto;
+    height: fit-content;
+    padding: 18px 0px;
+}
+
+.locked-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu-item{
+    margin: 18px auto 18px;
+    cursor: pointer;
+}
+.locked{
+    background-color: var(--light-grey);
+    cursor: default;
+}
+
+.menu-btn{
+    margin-bottom: 80px;
+}
+
+@media (max-width:430px){
+    .points-section{
+        padding-top: 175px;
+    }
+}
+
+@media (max-width:380px){
+    .points-section{
+        padding-top: 160px;
+    }
+    .white-text{
+        padding-top: 160px;
+    }
+}
+
+@media (max-width:350px){
+    .points-section{
+        padding-top: 120px;
+    }
+}

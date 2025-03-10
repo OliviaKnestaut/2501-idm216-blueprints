@@ -1,0 +1,20 @@
+.rewards-explination{
+    background-color: var(--light-blue);
+    margin: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column                    ;
+}
+
+.rewards-explination h1{
+    font-size: 24px;
+}
+
+.logo-mini{
+    margin: auto;
+}
+
+.rewards-btn{
+    margin-bottom: 90px;
+}
