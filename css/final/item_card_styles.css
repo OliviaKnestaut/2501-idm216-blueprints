@@ -52,8 +52,11 @@ body{
 .item-description div{
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     margin: 0;
+    width: 100%;
 }
+
 h1{
     padding: 8px;
     text-align: left;
