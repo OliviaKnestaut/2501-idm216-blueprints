@@ -47,13 +47,19 @@ $image_file = $files[0];
     <div class="item-image" style="background-image: url('<?php echo htmlspecialchars($image_file); ?>') !important"></div>
 
     <div class="item-description">
-        <h3><?php echo htmlspecialchars($item['name']); ?></h3>
-        <img id="heart-icon" src="../images/final/assets/heart-icon.svg" alt="heart icon">
+        <div>
+            <h1><?php echo htmlspecialchars($item['name']); ?></h1>
+            <img id="heart-icon" src="../images/final/assets/heart-icon.svg" alt="heart icon">
+        </div>
         <p>Earn +20 rewards points upon purchase</p>
         <p><?php echo htmlspecialchars($item['description']); ?></p> 
     </div>
+
+    
+
     <div class="additional-selectors">
         <h4>Customization</h4>
+        <?php if ($item['category'] === 'Entree'){ ?>
         <form action="#"> 
             <div class="form-group">
                 <input type="checkbox" id="checkbox1">
@@ -64,6 +70,7 @@ $image_file = $files[0];
                 <label for="checkbox2">Add Crispy Onions</label>
             </div>
         </form>
+        <?php } ?>
         <div class="extra-input">
             <input type="text" id="add-note" name="Name" placeholder="add a note...">
         </div>
@@ -82,10 +89,12 @@ $image_file = $files[0];
     </div>
     <button id="addToCartButton" class="add-to-cart btn fixed-btn" 
         data-id="<?php echo $item['id']; ?>" 
-        data-name="<?php echo htmlspecialchars($item['name']); ?>" 
+        data-name="<?php echo $item['name']; ?>" 
         data-price="<?php echo $item['price']; ?>" 
         data-image="<?php echo htmlspecialchars($image_file); ?>"
+        data-category="<?php echo $item['category']; ?>"
         data-quantity="1">
+
         Add to Cart
     </button>
     <div class="buffer"></div>

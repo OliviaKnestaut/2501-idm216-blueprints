@@ -57,7 +57,23 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        console.log(localStorage.getItem("recent-order"));
+
         recentOrder.forEach(item => {
+            //Customizations
+            let customizationList = "";
+
+            // Check if chili oil was added
+            if (item.chiliOil !== null && item.chiliOil) {
+                customizationList += "<li>Add Chili Oil</li>";
+            }
+            if (item.crispyOnions !== null && item.crispyOnions) {
+                customizationList += "<li>Add Crispy Onions</li>";
+            }
+            if (item.note !== "") {
+                customizationList += `<li>Note: <i>${item.note}</i></li>`;
+            }
+
             const orderItem = document.createElement("div");
             orderItem.classList.add("menu-item");
             orderItem.innerHTML = `
@@ -66,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="order-item">
                         <h2>${item.name}</h2>
                         <h2 class="price">$${(item.price * item.quantity).toFixed(2)}</h2>
+                        <ul class="customizations">
+                            ${customizationList}  <!-- The customization list will be added here -->
+                        </ul>
                     </div>
                     
                     <div class="item-settings">

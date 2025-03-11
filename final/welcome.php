@@ -24,6 +24,7 @@
     } elseif (isset($_SESSION["guest"]) && $_SESSION["guest"] === true) {
         $userStatus = "Welcome, guest!";
     } 
+
     ?>
     <img class="lantern-abs" src="../images/final/assets/lit-lantern.svg" alt="">
     <img class="lantern-abs" src="../images/final/assets/lit-lantern.svg" alt="">

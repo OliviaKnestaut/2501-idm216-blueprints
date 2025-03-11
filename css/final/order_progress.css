@@ -160,6 +160,10 @@ img.home{
     text-overflow: ellipsis;
 }
 
+.menu-details-order{
+    padding: 8px !important;
+}
+
 .order-item{
     width: 76%;
 }
