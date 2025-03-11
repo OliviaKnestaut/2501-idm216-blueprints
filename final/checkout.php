@@ -73,6 +73,7 @@
     <a id="submit-order" href="order-progress-1.php" class="btn">Submit Order</a>
 
     <script src="../js/final/final_script.js"></script>
+    <script src="../js/final/cart_script.js"></script>
 
 
 </body>

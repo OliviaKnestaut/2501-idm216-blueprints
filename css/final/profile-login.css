@@ -1,11 +1,11 @@
 body {
-    background-color: #C9DEEA;
+    background-color: var(--background);
     text-align: center;
 }
 
 .profile-container {
     margin: auto;
-    background: white;
+    background: var(--background);
     padding: 20px;
     text-align: center; 
     display: flex;
@@ -33,7 +33,6 @@ body {
     text-align: center;
 }
 
-
 .btn {
     width: 175px; 
     margin-top: 24px;
@@ -60,7 +59,7 @@ body {
 .menu-item {
     display: block;
     padding: 12px 15px;
-    background: white;
+    background: var(--background);
     margin: 5px auto;
     border-radius: 5px;
     text-decoration: none;

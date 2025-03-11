@@ -4,7 +4,7 @@ body {
 
 .profile-container {
     margin: auto;
-    background: white;
+    background: var(--background);
     padding: 20px;
     text-align: center; 
     display: flex;
