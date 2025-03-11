@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<?php session_start();
+
+if (!isset($_SESSION["loggedin"]) && !isset($_SESSION["guest"])) {
+    $_SESSION["guest"] = true;
+    $_SESSION["loggedin"] = false;
+}
+
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/final/main_styles.css">
+    <link rel="stylesheet" href="../css/final/components/nav-bar.css">
+    <link rel="stylesheet" href="../css/final/components/main_components.css">
+    <link rel="stylesheet" href="../css/final/welcome_styles.css">
+    <?php 
+    if ($_SESSION["loggedin"]){ ?>
+        <link rel="stylesheet" href="../css/final/profile-login.css">
+    <?php } else if ($_SESSION["guest"]){ ?>
+        <link rel="stylesheet" href="../css/final/profile-loggedout.css">
+    <?php } else { ?>
+        <link rel="stylesheet" href="../css/final/profile-loggedout.css">
+    <?php } ?>
+</head>
+<body>
+    <?php include 'includes/header.php'; ?>
+
+    <?php 
+    if ($_SESSION["loggedin"]){
+        include 'includes/profile-login.php';
+    } else if ($_SESSION["guest"]){
+        include 'includes/profile-loggedout.php';
+    } ?>
+
+    <?php include 'includes/nav-bar.php'; ?>
+    
+</body>
+</html>

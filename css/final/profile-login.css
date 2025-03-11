@@ -1,0 +1,76 @@
+body {
+    background-color: #C9DEEA;
+    text-align: center;
+}
+
+.profile-container {
+    margin: auto;
+    background: white;
+    padding: 20px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 153px;
+    margin: 24px;
+}
+
+.welcome-text {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.points {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin: 0 auto 15px; 
+    text-align: center;
+}
+
+
+.btn {
+    width: 175px; 
+    margin-top: 24px;
+}
+
+.sign-out:hover {
+    background-color: #e63946;
+}
+
+.dragon-illustration img {
+    width: 21rem;
+    display: block;
+    margin: 10px auto; 
+}
+
+.profile-menu {
+    background: #C9DEEA;
+    padding: 20px 10px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+.menu-item {
+    display: block;
+    padding: 12px 15px;
+    background: white;
+    margin: 5px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000000;
+    width: 90%;
+    font-size: 24px;
+    text-align: left;
+}
+
+.menu-item img {
+    width: 20px;
+    height: 20px;
+}
