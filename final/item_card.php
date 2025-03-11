@@ -111,6 +111,7 @@ $image_file = $files[0];
     <script src="../js/final/components/item-card-popup.js"></script>
     <script src="../js/final/components/heart-icon.js"></script>
     <script src="../js/final/final_script.js"></script>
+    <script src="../js/final/cart_script.js"></script>
 
 </body>
 </html>

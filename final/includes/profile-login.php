@@ -4,19 +4,10 @@
         <img class="profile-img" src="../images/final/assets/profile-img.svg" alt="Profile Image">
         <p class="welcome-text">Welcome <i>Jane</i></p>
         <p class="points"><strong>198 points</strong></p>
-        <form method="POST">
-            <button type="submit" name="signout" class="btn">SIGN OUT</button>
+        
+        <form action="includes/logout.php" method="post">
+            <button class="btn" type="submit">SIGN OUT</button>
         </form>
-
-        <?php
-        if (isset($_POST['signout'])) {
-            session_start();
-            session_unset();
-            session_destroy();
-            header("Location: index.php");
-            exit;
-        }
-        ?>
 
         <div class="dragon-illustration">
             <img src="../images/final/assets/profile-dragon-img.svg" alt="Dragon Illustration">

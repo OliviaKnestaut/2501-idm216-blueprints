@@ -12,12 +12,14 @@ if (!isset($_SESSION["loggedin"]) && !isset($_SESSION["guest"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rewards</title>
+    <title>Kim's Dragon | Rewards</title>
     <link rel="stylesheet" href="../css/final/main_styles.css">
     <link rel="stylesheet" href="../css/final/components/nav-bar.css">
     <link rel="stylesheet" href="../css/final/components/main_components.css">
     <link rel="stylesheet" href="../css/final/welcome_styles.css">
     <link rel="stylesheet" href="../css/final/menu_styles.css">
+    <link rel="icon"  type="image/png" href="../images/dragon-logo.png">
+
     <?php 
     if ($_SESSION["loggedin"]){ ?>
         <link rel="stylesheet" href="../css/final/rewards-login.css">

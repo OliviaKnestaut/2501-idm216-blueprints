@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="menu-details-order">
                     <div class="order-item">
                         <h2>${item.name}</h2>
-                        <h2 class="price">$${(item.price * item.quantity).toFixed(2)}</h2>
+                        <h2 class="price">$${item.price}</h2>
                         <ul class="customizations">
                             ${customizationList}  <!-- The customization list will be added here -->
                         </ul>

@@ -8,5 +8,6 @@
         <div class="dragon-illustration">
             <img src="../images/final/assets/profile-dragon-img.svg" alt="Dragon Illustration">
         </div>
+        <div class="buffer"></div>
 </div>
 
