@@ -29,7 +29,7 @@
             <p class="pickup-time">Your order will be ready at: 12:45pm</p>
         </div>
         <div class="centered-text">
-            <h1 class="order-number">#333</h1>
+            <h1 class="order-number"></h1>
         </div>
         <div class="centered-text">
             <p>show at truck</p>

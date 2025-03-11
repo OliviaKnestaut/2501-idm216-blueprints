@@ -42,6 +42,8 @@
         </div>
     </div>
 
+    <p id="cart-error">Your cart is empty. Please add items to your cart before proceeding to checkout.</p>
+
     <div class="order-details">
         <h3>Total Summary</h3>
         <div class="subtotal">
@@ -57,8 +59,8 @@
             <p><strong>$0.00</strong></p>
         </div>
     </div>
-    
-    <a href="checkout.php" class="btn fixed-btn">Pay Now</a>
+
+    <button id="pay-now-btn" class="btn fixed-btn">Pay Now</button>
     <div class="buffer"></div>
     <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/final/components/plus-minus-btn.js"></script>

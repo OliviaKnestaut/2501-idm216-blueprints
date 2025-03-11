@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 if (index === stepCount - 1) {
                     setTimeout(() => {
-                        window.location.href = "../beta/order-progress-2.php";
+                        window.location.href = "../final/order-progress-2.php";
                     }, 500); 
                 }
             }, 1200); 

@@ -44,27 +44,52 @@ function continueAsGuest() {
     window.location.href = 'welcome.php';
 }
 
+    let filter = "closed"
+    function openFilterPopup() {
 
-let filter = "closed"
-function openFilterPopup() {
+        if (filter == 'closed'){
+            filter = 'open';
+            document.getElementById("filter-popup").style.visibility = "visible";
+            document.getElementsByClassName("filter-btn")[0].style.width = "250px";
+        }
+        else{
+            document.getElementById("filter-popup").style.visibility = "hidden";
+            document.getElementsByClassName("filter-btn")[0].style.width = "140px";
+            filter = 'closed';
+        }
+        
+    }
 
-    if (filter == 'closed'){
-        filter = 'open';
-        document.getElementById("filter-popup").style.visibility = "visible";
-        document.getElementsByClassName("filter-btn")[0].style.width = "250px";
+
+    function applyFilter(element) {
+        let category = element.getAttribute("data-category");
+        let diet = element.getAttribute("data-diet");
+        const params = new URLSearchParams(window.location.search);
+        const activeDiet = params.get("diet"); // Get 'diet' from URL
+
+        if(diet === activeDiet){
+            element.classList.remove("active-filter");
+            window.location.href = `main.php?category=${category}&diet=`;
+        } else{
+            window.location.href = `main.php?category=${category}&diet=${diet}`;
+        }
     }
-    else{
-        document.getElementById("filter-popup").style.visibility = "hidden";
-        document.getElementsByClassName("filter-btn")[0].style.width = "140px";
-        filter = 'closed';
-    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const activeDiet = params.get("diet"); // Get 'diet' from URL
+        const filterButtons = document.querySelectorAll(".filter-options h3");
     
-}
-
-function applyFilter(diet) {
-    let category = "<?php echo $category); ?>"; // Get current category
-    window.location.href = `main.php?category=${category}&diet=${diet}`;
-}
+        filterButtons.forEach(button => {
+            let buttonDiet = button.getAttribute("data-diet");
+    
+            if (buttonDiet === activeDiet) {
+                button.classList.add("active-filter");
+            } else {
+                button.classList.remove("active-filter");
+            }
+        });
+    });
 
 //CART
 
@@ -105,17 +130,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function addToCart(item) {
-        console.log("addToCart called with:", item);
 
+        console.log("addToCart called with:", item);
         console.log("Cart before update:", cart);
 
-        // Check if the item already exists in the cart
         let existingItem = cart.find(cartItem => cartItem.id === item.id);
 
         if (existingItem) {
-
             const popupMessage = document.querySelector("#popup p");
-
             if (popupMessage) {
                 popupMessage.textContent = "This item is already in your cart!";
             }
@@ -129,13 +151,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.querySelectorAll(".add-to-cart").forEach(button => {
+
         button.addEventListener("click", function () {
+            let chiliOil = null;
+            let crispyOnions = null;
+            let note = document.getElementById("add-note").value.trim(); 
+        
+            if (this.getAttribute("data-category") === 'Entree'){
+                chiliOil = document.getElementById("checkbox1").checked;
+                crispyOnions = document.getElementById("checkbox2").checked;
+            }
+
             const item = {
                 id: this.getAttribute("data-id"),
                 name: this.getAttribute("data-name"),
                 price: this.getAttribute("data-price"),
                 image: this.getAttribute("data-image"),
-                quantity: this.getAttribute("data-quantity")
+                quantity: this.getAttribute("data-quantity"),
+                chiliOil: chiliOil,
+                crispyOnions: crispyOnions,
+                note: note
             };
             addToCart(item);
         });
@@ -157,15 +192,33 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-
         cart.forEach(item => {
             const cartItem = document.createElement("div");
             cartItem.classList.add("menu-item");
+
+            //Customizations
+            let customizationList = "";
+
+            // Check if chili oil was added
+            if (item.chiliOil !== null && item.chiliOil) {
+                customizationList += "<li>Add Chili Oil</li>";
+            }
+            if (item.crispyOnions !== null && item.crispyOnions) {
+                customizationList += "<li>Add Crispy Onions</li>";
+            }
+            if (item.note !== "") {
+                customizationList += `<li>Note: <i>${item.note}</i></li>`;
+            }
+
+
             cartItem.innerHTML = `
                 <div class="menu-image" style="background-image: url('${item.image}');"></div>
                 <div class="menu-details">
                     <h2>${item.name}</h2>
                     <h2 class="price">$${(item.price * item.quantity).toFixed(2)}</h2>
+                    <ul class="customizations">
+                        ${customizationList}  <!-- The customization list will be added here -->
+                    </ul>
                     <div class="item-settings">
                         <a href="#" class="remove-item" data-id="${item.id}">Remove</a>
                         <div class="quantity">
@@ -240,6 +293,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     renderCart();
+
+    document.getElementById("pay-now-btn").addEventListener("click", function () {
+        let cartError = document.getElementById("cart-error");
+
+
+        if (cart.length === 0) {
+            cartError.style.display = "block";
+        } else {
+            cartError.style.display = "none";
+            window.location.href = "checkout.php";
+        }
+    });
 
     if (cart.length === 0) {
         console.log("No items in cart, skipping render.");

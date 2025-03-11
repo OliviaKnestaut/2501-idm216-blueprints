@@ -61,19 +61,16 @@
         <div id="filter-popup" class="filter-popup">
             <div class="filter-popup-content">
                 <div class="filter-options">
-                    <h3 onclick="applyFilter('')">All</h3>
-                    <h3 onclick="applyFilter('Gluten Free')">Gluten Free</h3>
-                    <h3 onclick="applyFilter('Vegetarian')">Vegetarian</h3>
-                    <h3 onclick="applyFilter('Vegan')">Vegan</h3>
-                    <h3 onclick="applyFilter('Pescatarian')">Pescatarian</h3>
+                    <h3 data-category="<?php echo $category; ?>" data-diet="" onclick="applyFilter(this)">All</h3>
+                    <h3 data-category="<?php echo $category; ?>" data-diet="Gluten Free" onclick="applyFilter(this)">Gluten Free</h3>
+                    <h3 data-category="<?php echo $category; ?>" data-diet="Vegetarian" onclick="applyFilter(this)">Vegetarian</h3>
+                    <h3 data-category="<?php echo $category; ?>" data-diet="Vegan" onclick="applyFilter(this)">Vegan</h3>
+                    <h3 data-category="<?php echo $category; ?>" data-diet="Pescatarian" onclick="applyFilter(this)">Pescatarian</h3>
                 </div>
             </div>
         </div>
-
         
     </div>
-
-    
 
     <div class="menu-content">
         <?php include 'includes/menu-bar.php'; ?>
@@ -104,11 +101,8 @@
         </a>
     <?php } ?>
 
-
     </div>
     
-
- 
 
     <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/final/final_script.js"></script>
