@@ -45,5 +45,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update SVG text for the inputs
     updateSVGText(name, 'svgname', 'JOHN DOE');
     updateSVGText(cardnumber, 'svgnumber', '0123 4567 8910 1112');
-    updateSVGText(securitycode, 'svgsecurity', '985');
 });

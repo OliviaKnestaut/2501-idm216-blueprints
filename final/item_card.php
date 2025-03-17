@@ -4,6 +4,13 @@
 <?php
 require_once 'includes/db.php';
 
+session_start();
+
+if (!isset($_SESSION["loggedin"]) && !isset($_SESSION["guest"])) {
+    $_SESSION["guest"] = true;
+    $_SESSION["loggedin"] = false;
+}
+
 // Get item ID from URL, default to 1 if not provided
 $item_id = $_GET['id'] ?? 0;
 
@@ -49,7 +56,10 @@ $image_file = $files[0];
     <div class="item-description">
         <div>
             <h1><?php echo htmlspecialchars($item['name']); ?></h1>
-            <img id="heart-icon" src="../images/final/assets/heart-icon.svg" alt="heart icon">
+            <?php 
+            if ($_SESSION["loggedin"]){ ?>
+                <img id="heart-icon" src="../images/final/assets/heart-icon.svg" alt="heart icon">
+            <?php } ?>
         </div>
         <p>Earn +20 rewards points upon purchase</p>
         <p><?php echo htmlspecialchars($item['description']); ?></p> 

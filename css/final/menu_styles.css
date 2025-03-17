@@ -74,6 +74,7 @@
 
 #filter-popup{
     visibility: hidden;
+    cursor: pointer;
 }
 .filter-options{
     display: flex;
@@ -94,6 +95,7 @@
     border-radius: 10vw;
     padding: 4px 8px;
     background-color: var(--background);
+    cursor: pointer;
 }
 
 .filter-btn{
