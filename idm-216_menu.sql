@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.2
+-- version 5.1.1deb5ubuntu1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 11, 2025 at 03:38 PM
--- Server version: 5.7.24
--- PHP Version: 8.3.1
+-- Generation Time: Mar 17, 2025 at 07:13 PM
+-- Server version: 10.6.18-MariaDB-0ubuntu0.22.04.1
+-- PHP Version: 8.1.2-1ubuntu2.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `idm-216`
+-- Database: `ojk25_db`
 --
 
 -- --------------------------------------------------------
@@ -35,7 +35,7 @@ CREATE TABLE `idm-216_menu` (
   `category` varchar(6) DEFAULT NULL,
   `diet` varchar(43) DEFAULT NULL,
   `community` varchar(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 --
 -- Dumping data for table `idm-216_menu`
@@ -85,33 +85,6 @@ INSERT INTO `idm-216_menu` (`id`, `name`, `description`, `price`, `category`, `d
 (41, 'Thai Iced Tea', 'Homemade Thai iced tea served with straw', '3.00', 'Drinks', 'Vegetarian, Vegan, Pescatarian, Gluten Free', ''),
 (42, 'Soda', 'Choice of Coca Cola, Gatorade, Mountain Dew, Minute Maid, Canada Dry, Diet Coke, Arizona Tea, or Sprite', '4.00', 'Drinks', 'Vegetarian, Vegan, Pescatarian, Gluten Free', '');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `idm-216_users`
---
-
-CREATE TABLE `idm-216_users` (
-  `id` int(11) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `idm-216_users`
---
-
-INSERT INTO `idm-216_users` (`id`, `firstname`, `lastname`, `username`, `password`, `created_at`) VALUES
-(2, 'Olivia', 'Knestaut', 'ojk25@drexel.edu', '$2y$10$cGWLHjJkKhhpNAOi/qPF1OdXBgpya1GMepYIwlzoXYPHMUmWh6/dW', '2025-01-21 01:37:14'),
-(3, 'aaron', 'knestaut', 'aaronknestaut@gmail.com', '$2y$10$t0W4DkEBK21HzTBITIS9weWlDaz.50HFh4k2VkiJbrm3R4dDPr9zm', '2025-01-21 04:04:17'),
-(4, 'Hannah', 'Desmond', 'hdesmond913@gmail.com', '$2y$10$lm7N8qI0nzDjbuX90DhpcOaQXzueERx31tVTNi.pYePRBtPRNIFLC', '2025-01-21 04:49:20'),
-(5, 'Jervis', 'Thompson', 'jervo@mac.com', '$2y$10$mqoim59bIlzibVZU3iVfUuTPXxJxec6K/jZJCK79L0jtDGZ7j0OPi', '2025-01-21 11:55:43'),
-(6, 'Amy', 'Au', 'aa4644@drexel.edu', '$2y$10$YdI.COiWkEWWObT0TvQJb.uRLTYyoo6yo/nqbf7xDHSQ.MNbLKhue', '2025-01-21 14:24:12'),
-(7, 'Vy', 'Le', 'vpl26@drexel.edu', '$2y$10$hEX2lviRha6LGkkErgZu9uhJDKbLT.6ULNayMF3Vdnj8FonAn0VMi', '2025-01-21 14:34:50');
-
 --
 -- Indexes for dumped tables
 --
@@ -121,23 +94,6 @@ INSERT INTO `idm-216_users` (`id`, `firstname`, `lastname`, `username`, `passwor
 --
 ALTER TABLE `idm-216_menu`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `idm-216_users`
---
-ALTER TABLE `idm-216_users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `idm-216_users`
---
-ALTER TABLE `idm-216_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
