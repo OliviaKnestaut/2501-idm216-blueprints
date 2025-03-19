@@ -66,6 +66,7 @@
     <script src="../js/final/components/plus-minus-btn.js"></script>
     <script src="../js/final/final_script.js"></script>
     <script src="../js/final/cart_script.js"></script>
+    <script src="../js/final/cart_indicator.js"></script>
 
 </body>
 </html>
