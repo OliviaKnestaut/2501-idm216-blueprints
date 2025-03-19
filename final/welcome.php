@@ -178,6 +178,6 @@
     <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/final/order-placed.js"></script>
 
-
+    <script src="../js/final/final_script.js"></script>
 </body>
 </html>
