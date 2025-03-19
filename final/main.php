@@ -106,6 +106,7 @@
 
     <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/final/final_script.js"></script>
+    <script src="../js/final/cart_indicator.js"></script>
     
 </body>
 </html>

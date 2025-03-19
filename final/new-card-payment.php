@@ -110,6 +110,7 @@
     <script src="../js/final/final_script.js"></script>
     <script src="../js/final/components/card-payment.js"></script>
     <script src="../js/final/components/card-details.js"></script>
+    <script src="../js/final/cart_indicator.js"></script>
 
 
 

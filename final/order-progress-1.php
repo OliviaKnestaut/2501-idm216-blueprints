@@ -65,6 +65,7 @@
     <?php include 'includes/nav-bar.php'; ?>
     <script src="../js/final/components/loading-bar.js"></script>
     <script src="../js/final/order-placed.js"></script>
+    
 
 
 </body>
