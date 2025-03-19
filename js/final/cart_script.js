@@ -1,8 +1,16 @@
-//CART
-
 document.addEventListener("DOMContentLoaded", function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartContent = document.querySelector(".cart-content");
+
+    // Update the red dot on the cart icon
+    function updateCartIndicator() {
+        const cartDot = document.getElementById("cart-dot");
+        if (cart.length > 0) {
+            cartDot.style.display = "block";  
+        } else {
+            cartDot.style.display = "none";  
+        }
+    }
 
     function updateOrderDetails() {
         // Get the updated cart from localStorage
@@ -13,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return total + item.price * item.quantity;
         }, 0);
         
-        // Assume a tax rate of 10% for now (adjust as needed)
+        // Assume a tax rate of 6% for now (adjust as needed)
         let taxRate = 0.06;
         let tax = subtotal * taxRate;
     
@@ -26,18 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".order-details .total p:nth-child(2)").textContent = `$${total.toFixed(2)}`;
     }
 
+    // Update cart indicator on page load
+    updateCartIndicator();
+
     if (window.location.pathname.includes("checkout.php")) {
         updateOrderDetails();
     }
-    
 
+    // Save the cart in localStorage
     function saveCart() {
         localStorage.setItem("cart", JSON.stringify(cart));
         renderCart();
     }
 
+    // Add an item to the cart
     function addToCart(item) {
-
         console.log("addToCart called with:", item);
         console.log("Cart before update:", cart);
 
@@ -55,16 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("cart", JSON.stringify(cart));
 
         renderCart();
+        updateCartIndicator();  // Update  red dot after adding an item
     }
 
-    document.querySelectorAll(".add-to-cart").forEach(button => {
 
+    document.querySelectorAll(".add-to-cart").forEach(button => {
         button.addEventListener("click", function () {
             let chiliOil = null;
             let crispyOnions = null;
             let note = document.getElementById("add-note").value.trim(); 
         
-            if (this.getAttribute("data-category") === 'Entree'){
+            if (this.getAttribute("data-category") === 'Entree') {
                 chiliOil = document.getElementById("checkbox1").checked;
                 crispyOnions = document.getElementById("checkbox2").checked;
             }
@@ -72,14 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const item = {
                 id: this.getAttribute("data-id"),
                 name: this.getAttribute("data-name"),
-                price: this.getAttribute("data-price"),
+                price: parseFloat(this.getAttribute("data-price")),
                 image: this.getAttribute("data-image"),
-                quantity: this.getAttribute("data-quantity"),
+                quantity: parseInt(this.getAttribute("data-quantity")),
                 chiliOil: chiliOil,
                 crispyOnions: crispyOnions,
                 note: note
             };
-            addToCart(item);
+            addToCart(item);  // Add item to cart
         });
     });
 
@@ -103,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const cartItem = document.createElement("div");
             cartItem.classList.add("menu-item");
 
-            //Customizations
+            // Customizations
             let customizationList = "";
 
             // Check if chili oil was added
@@ -116,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (item.note !== "") {
                 customizationList += `<li>Note: <i>${item.note}</i></li>`;
             }
-
 
             cartItem.innerHTML = `
                 <div class="menu-image" style="background-image: url('${item.image}');"></div>
@@ -167,12 +178,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     quantityInput.value = item.quantity;
                 }
             });
-            updateOrderDetails();
+
+            updateOrderDetails(); 
         });
 
         addCartListeners();
         updateOrderDetails();
-        
+        updateCartIndicator();  
     }
 
     function updateCartQuantity(itemId, newQuantity) {
@@ -194,18 +206,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (index !== -1) {
                     cart.splice(index, 1); // Remove item from cart
                     saveCart(); // Save and re-render the cart
+                    updateCartIndicator();  // Update the red dot when item is removed
                 }
             });
         });
     }
 
-    renderCart();
+    renderCart(); 
 
-    if (window.location.pathname.includes("cart.php")){
+    if (window.location.pathname.includes("cart.php")) {
         document.getElementById("pay-now-btn").addEventListener("click", function () {
             let cartError = document.getElementById("cart-error");
-    
-    
+
             if (cart.length === 0) {
                 cartError.style.display = "block";
             } else {
@@ -213,13 +225,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = "checkout.php";
             }
         });
-    
+
         if (cart.length === 0) {
             console.log("No items in cart, skipping render.");
             return;
         }
         console.log(localStorage.getItem("cart"));
     }
-    
-    
 });

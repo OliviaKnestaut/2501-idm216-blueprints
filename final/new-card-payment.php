@@ -13,7 +13,7 @@
     <?php include 'includes/header.php'; ?>
     
         <div class="payment-title">
-            <h1>Payment Information</h1>
+            <h1>Payment Informations</h1>
         </div>
         <div class="container-wrapper">
             <div class="container preload">
@@ -77,8 +77,6 @@
                                     </g>
                                 </g>
                             </g>
-                            <g id="Back">
-                            </g>
                         </svg>
                     </div>
                 </div>
@@ -118,3 +116,4 @@
 
 </body>
 </html>
+

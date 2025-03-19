@@ -40,5 +40,6 @@ if (!isset($_SESSION["loggedin"]) && !isset($_SESSION["guest"])) {
 
     <?php include 'includes/nav-bar.php'; ?>
     
+    <script src="../js/final/final_script.js"></script>
 </body>
 </html>
