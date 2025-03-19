@@ -199,6 +199,17 @@ header div.left, header a.left{
     cursor: pointer;
 }
 
+.cart-dot {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--orangey);
+    border-radius: 50%;
+    display: none;
+}
+
 .buffer{
     width: 100%;
     height: 135px;
